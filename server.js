@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
-// const methodOverride = require("method-override");
+const methodOverride = require("method-override");
 const mongoose = require('mongoose');
 
 // Database Configuration
@@ -19,6 +19,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 // Routes/ Controllers
 const plantsController = require('./controllers/plants.js');

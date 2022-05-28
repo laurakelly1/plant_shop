@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs'); %> 
+    <title>Planta Nullius | Edit <%= plant.name  %> </title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs'); %> 
+    </header>
+    <h2>Edit <%= plant.name  %></h2>
+    <h3>
+        Plant Attributes
+    </h3>
+
+    <form action="/shop/<%= plant._id %>?_method=PUT" method="POST">
+        <fieldset class="plant-details">
+            <legend>Plant Details</legend>
+            <!-- name -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name='name' value="<%= plant.name %> "/>
+            <!-- description -->
+            <label for="description">Description</label>
+            <textarea id="description" name="description"><%= plant.description %> </textarea>
+        </fieldset>
+        <input type="submit" value="Update Plant"/>
+    </form>
+
+
+    <footer>
+        <%- include('../partials/footer.ejs'); %> 
+    </footer>    
+</body>
+</html>
