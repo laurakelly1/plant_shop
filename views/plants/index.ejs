@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head.ejs'); %> 
-    <title>Planta Nullius | Shop All</title>
+    <%- include('../partials/head.ejs'); %>
+        <title>Planta Nullius | Shop All</title>
 </head>
+
 <body>
     <header>
         <%- include('../partials/header.ejs'); %>
     </header>
 
     <h2>Shop All</h2>
-    
+
     <a href="/shop/new">Create new plant</a>
-    
+
+    <ul>
+        <% for(let i=0; i < plants.length; i++) {%>
+            <li>
+                <a href="/shop/<%= plants[i]._id %>">
+                    <%= plants[i].name %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+
 
     <footer>
-        <%- include('../partials/footer.ejs'); %> 
-    </footer>    
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

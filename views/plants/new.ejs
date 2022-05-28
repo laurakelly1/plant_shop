@@ -13,15 +13,15 @@
     <main>
         <h2>New Plant</h2>
 
-        <form action="/plants" method="POST">
+        <form action="/shop" method="POST">
             <fieldset class="plant-details">
                 <legend>Plant Details</legend>
                 <!-- name -->
                 <label for="name">Name</label>
-                <input type="text" id="name" />
+                <input type="text" id="name" name='name'/>
                 <!-- description -->
                 <label for="description">Description</label>
-                <textarea id="description"></textarea>
+                <textarea id="description" name="description"></textarea>
             </fieldset>
             <input type="submit" value="Create Plant"/>
         </form>
