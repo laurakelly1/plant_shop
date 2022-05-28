@@ -39,9 +39,17 @@ const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    console.log(req.session.currentUser);
+    if(req.session.currentUser) {
+        res.render('dashboard.ejs', {
+            currentUser: req.session.currentUser,
+        });
+    } else {
+        res.render('index.ejs', {
+            currentUser: req.session.currentUser
+        })
+    }
 })
-
 
 // Listening
 const PORT = process.env.PORT;

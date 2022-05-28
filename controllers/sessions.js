@@ -5,8 +5,14 @@ const sessionsRouter = express.Router();
 const User = require('../models/user.js');
 
 //I
-//N
-//D
+//New (login page)
+sessionsRouter.get('/new', (req, res) => {
+    res.render('sessions/new.ejs', {
+        currentUser: req.session.currentUser,
+    });
+})
+
+//Delete User
 sessionsRouter.delete('/', (req, res) => {
     req.session.destroy((error) => {
         res.redirect('/');
@@ -15,7 +21,7 @@ sessionsRouter.delete('/', (req, res) => {
 
 
 //U
-//C
+//Create User
 sessionsRouter.post('/', (req, res) => {
     User.findOne({
         email: req.body.email,
