@@ -7,6 +7,10 @@ router.get('/', (req, res) => {
 });
 
 //N
+router.get('/new', (req, res) => {
+    res.render('plants/new.ejs');
+});
+
 //D
 //U
 //C
