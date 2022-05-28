@@ -6,6 +6,10 @@ require('dotenv').config();
 
 
 // Routes/ Controllers
+const plantsController = require('./controllers/plants.js');
+app.use('/shop', plantsController);
+
+
 app.get('/', (req, res) => {
     res.render('index.ejs');
 })
