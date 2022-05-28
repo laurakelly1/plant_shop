@@ -2,7 +2,7 @@
 <img src="https://github.com/laurakelly1/wall-art-app/blob/main/images/websiteHeading.png" />
 </p> -->
 <h1>Planta Nullius</h1>
-The name is latin for 'no man's plant'. That's what we sell, plants without an owner!! Shop all our wonderful plants and add your favourites to the cart.
+The name is Latin for 'no man's plant'. That's what we sell, plants without an owner!! Shop all our healthy and fresh plants and add your favourites to the cart.
 
 <h2>Technologies Used</h2>
 <ul>

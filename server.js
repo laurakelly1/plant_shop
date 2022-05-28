@@ -4,6 +4,7 @@ const app = express();
 require('dotenv').config();
 const methodOverride = require("method-override");
 const mongoose = require('mongoose');
+const session = require('express-session');
 
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
@@ -20,11 +21,22 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: false
+    }));
 
 // Routes/ Controllers
 const plantsController = require('./controllers/plants.js');
 app.use('/shop', plantsController);
 
+const userController = require('./controllers/users.js');
+app.use('/users', userController);
+
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
