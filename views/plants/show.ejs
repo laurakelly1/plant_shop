@@ -2,12 +2,30 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs'); %> 
-    <title>Planta Nullius</title>
+    <title>Planta Nullius | <%= plant.name %></title>
 </head>
 <body>
     <header>
         <%- include('../partials/header.ejs'); %> 
     </header>
+<main>
+    <h2><%= plant.name  %> </h2>
+    <ul>
+        <li>
+            Name: <%= plant.name  %> 
+        </li>
+        <li>
+            Description: <%= plant.description %> 
+        </li>
+    </ul>
+</main>
+    
+
+
+
+
+
+
     <footer>
         <%- include('../partials/footer.ejs'); %> 
     </footer>    

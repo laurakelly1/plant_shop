@@ -27,5 +27,12 @@ router.post('', (req, res) => {
 
 //E
 //S
+router.get('/:id', (req, res) => {
+    Plant.findById(req.params.id, (error, foundPlant) => {
+        res.render('plants/show.ejs', {
+            plant: foundPlant,
+        });
+    });
+});
 
 module.exports = router;
