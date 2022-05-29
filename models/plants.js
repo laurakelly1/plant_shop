@@ -5,7 +5,7 @@ const plantSchema = new Schema({
   name: String,
   description: String,
   type: Array,
-  latin: String,
+  botanicalName: String,
   price: Number,
   quantity: Number,
   image: String,

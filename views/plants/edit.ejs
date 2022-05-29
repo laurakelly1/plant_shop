@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head.ejs'); %>
-        <title>Planta Nullius | Edit <%= plant.name %>
+        <title>Planta Nullius | Edit
         </title>
 </head>
 
@@ -21,16 +21,19 @@
         <fieldset class="plant-details">
             <legend>Plant Details</legend>
             <!-- name -->
-            <label for="name">Name</label>
+            <label for="name">Name
             <input type="text" id="name" name='name' value="<%= plant.name %> " />
+            </label>
             <!-- description -->
-            <label for="description">Description</label>
+            <label for="description">Description
             <textarea id="description" name="description"><%= plant.description %> </textarea>
+            </label>
             <!-- bestSeller -->
-            <label for="bestSeller">Best Seller</label>
-            <input type="checkbox" id="bestSeller" name="bestSeller" <% if(plant.bestSeller
-            === true){ %> checked <% } %> />
-
+            <label for="bestSeller">Best Seller<br/>
+                <input type="checkbox" class="filled-in" id="bestSeller" name="bestSeller" <%
+                    if(plant.bestSeller===true){ %> checked <% } %> />
+                    <span></span>
+            </label>
         </fieldset>
         <input type="submit" value="Update Plant" />
     </form>

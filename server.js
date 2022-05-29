@@ -28,6 +28,7 @@ app.use(
         resave: false,
         saveUninitialized: false
     }));
+app.use(express.static(__dirname + "/public"));
 
 // Routes/ Controllers
 const plantsController = require('./controllers/plants.js');
