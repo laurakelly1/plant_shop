@@ -39,7 +39,6 @@ const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
-    console.log(req.session.currentUser);
     if(req.session.currentUser) {
         res.render('dashboard.ejs', {
             currentUser: req.session.currentUser,
