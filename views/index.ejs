@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head.ejs'); %>
-    <title>Planta Nullius</title>
+        <title>Planta Nullius</title>
 </head>
+
 <body>
     <header>
-        <%- include('./partials/header.ejs'); %> 
+        <%- include('./partials/header.ejs'); %>
     </header>
+    <best-Sellers>
+        <h2>Best Sellers</h2>
+        <ul>
+            <% for(let i=0; i < plants.length; i++) {%>
+
+                <% if (plants[i].bestSeller==true) { %>
+                    <li>
+                        <a href="/shop/<%= plants[i]._id %>">
+                            <%= plants[i].name %>
+                        </a>
+                    </li>
+                <% } %>
+             <% } %>
+        </ul>
+    </best-Sellers>
     <footer>
-        <%- include('./partials/footer.ejs'); %> 
-    </footer>    
+        <%- include('./partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

@@ -2,10 +2,20 @@ const express = require('express');
 const { route } = require('express/lib/application');
 const Plant = require('../models/plants.js');
 const User = require('../models/user.js');
-const router = express.Router();
+const plantRouter = express.Router();
+
+
+//SEED
+const PlantSeed = require('../models/plantSeed.js');
+plantRouter.get('/seed', (req, res) =>{
+    Plant.deleteMany({}, (error, allPlants) => {});
+    Plant.create(PlantSeed, (error, data) => {
+        res.redirect('/shop');
+    } )
+})
 
 //I
-router.get('', (req, res) => {
+plantRouter.get('', (req, res) => {
     Plant.find({}, (error, foundPlants) => {
         res.render('plants/index.ejs', {
             plants: foundPlants,
@@ -15,35 +25,52 @@ router.get('', (req, res) => {
 });
 
 //N
-router.get('/new', (req, res) => {
+plantRouter.get('/new', (req, res) => {
     res.render('plants/new.ejs', {
         currentUser: req.session.currentUser
     });
 });
 
 //D
-router.delete('/:id', (req, res) => {
+plantRouter.delete('/:id', (req, res) => {
     Plant.findByIdAndRemove(req.params.id, () => {
         res.redirect('/shop');
     });
 });
 
 //U
-router.put('/:id', (req, res) => {
-    Plant.findByIdAndUpdate(req.params.id, req.body, () => {
-        res.redirect('/shop');
+plantRouter.put('/:id', (req, res) => {
+    if (req.body.bestSeller === 'on') {
+        req.body.bestSeller = true;
+    } else {
+        req.body.bestSeller = false;
+    }
+    Plant.findByIdAndUpdate(
+        req.params.id, 
+        req.body, 
+        {
+            new: true,
+        },
+        (error, updatedPlant) => {        
+        res.redirect(`/shop/${req.params.id}`);
     })
 })
 
 //C
-router.post('', (req, res) => {
+plantRouter.post('', (req, res) => {
+    if (req.body.bestSeller === 'on') {
+        req.body.bestSeller = true;
+    } else {
+        req.body.bestSeller = false;
+    };
+
     Plant.create(req.body, (error, createdPlant) => {
         res.redirect('/shop');
     });
 });
 
 //E
-router.get('/:id/edit', (req, res) => {
+plantRouter.get('/:id/edit', (req, res) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/edit.ejs', {
             plant: foundPlant,
@@ -53,7 +80,7 @@ router.get('/:id/edit', (req, res) => {
 });
 
 //S
-router.get('/:id', (req, res) => {
+plantRouter.get('/:id', (req, res) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/show.ejs', {
             plant: foundPlant,
@@ -62,4 +89,4 @@ router.get('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = plantRouter;

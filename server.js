@@ -5,6 +5,7 @@ require('dotenv').config();
 const methodOverride = require("method-override");
 const mongoose = require('mongoose');
 const session = require('express-session');
+const Plant = require('./models/plants.js');
 
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
@@ -39,15 +40,19 @@ const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
-    if(req.session.currentUser) {
+    Plant.find({}, (error, foundPlants) => {
+     if(req.session.currentUser) {
         res.render('dashboard.ejs', {
             currentUser: req.session.currentUser,
+            plants: foundPlants
         });
     } else {
         res.render('index.ejs', {
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
+            plants: foundPlants,
         })
-    }
+    }   
+    })
 })
 
 // Listening
