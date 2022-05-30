@@ -1,17 +1,21 @@
 body {
-    background-color: rgb(234, 227, 225);
+    background-color: #f1f8e9;
     font-family: 'Source Serif Pro', serif;
 }
 
 /* HEADER */
-header {
-    display: flex;
+nav {
+    background-color: #dcedc8 ;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
-
-h1 {
-    margin: 0;
-    padding: 0px;
-    font-size: 40px;
+#title {
+    color: black;
+    padding: 0% 20% 1% 2%;
+}
+.nav-bar {
+    color: black;
+    border-left: 1px solid black;
 }
 input {
 	all: inherit;

@@ -1,5 +1,5 @@
 <nav class="header">
-    <a class="brand-logo left" href="/">
+    <a id="title" class="brand-logo left" href="/">
 
         planta nullius
 
@@ -7,30 +7,30 @@
     <div class="right">
         <% if(currentUser) { %>
             <ul>
-                <li class="nav-bar">
-                    <a href="/shop">Shop All</a>
+                <li>
+                    <a class="nav-bar" href="/shop">Shop All</a>
                 </li>
-                <li class="nav-bar">
+                <li>
                     <a>
-                        <form class="logout-button" action="/sessions?_method=DELETE" method="POST">
+                        <form class="nav-bar" class="logout-button" action="/sessions?_method=DELETE" method="POST">
                             <input type="submit" value="Log Out" />
                         </form>
                     </a>
                 </li>
-                <li class="nav-bar">
-                    <a href="/cart">Cart</a>
+                <li>
+                    <a class="nav-bar" href="/cart">Cart</a>
                 </li>
             </ul>
             <% } else { %>
                 <ul>
-                    <li class="nav-bar">
-                        <a href="/shop">Shop All</a>
+                    <li >
+                        <a class="nav-bar"href="/shop">Shop All</a>
                     </li>
-                    <li class="nav-bar">
-                        <a href="/sessions/new">Login</a>
+                    <li>
+                        <a class="nav-bar" href="/sessions/new">Login</a>
                     </li>
-                    <li class="nav-bar">
-                        <a href="/cart">Cart</a>
+                    <li>
+                        <a class="nav-bar" href="/cart">Cart</a>
                     </li>
                 </ul>
                 <% } %>
