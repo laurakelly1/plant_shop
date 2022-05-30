@@ -1,35 +1,39 @@
-<a href="/">
-    <h1>
-        Planta Nullius
-    </h1>
-</a>
+<nav class="header">
+    <a class="brand-logo left" href="/">
 
-<nav>
-    <% if(currentUser) { %>
-        <ul>
-            <li>
-                <a href="/shop">Shop All</a>
-            </li>
-            <li>
-                <form action="/sessions?_method=DELETE" method="POST">
-                    <input type="submit" value="Log Out" />
-                </form>
-            </li>
-            <li>
-                <a href="/cart">Cart</a>
-            </li>
-        </ul>
-        <% } else { %>
+        planta nullius
+
+    </a>
+    <div class="right">
+        <% if(currentUser) { %>
             <ul>
-                <li>
+                <li class="nav-bar">
                     <a href="/shop">Shop All</a>
                 </li>
-                <li>
-                    <a href="/sessions/new">Login</a>
+                <li class="nav-bar">
+                    <a>
+                        <form class="logout-button" action="/sessions?_method=DELETE" method="POST">
+                            <input type="submit" value="Log Out" />
+                        </form>
+                    </a>
                 </li>
-                <li>
+                <li class="nav-bar">
                     <a href="/cart">Cart</a>
                 </li>
             </ul>
-        <% } %>
+            <% } else { %>
+                <ul>
+                    <li class="nav-bar">
+                        <a href="/shop">Shop All</a>
+                    </li>
+                    <li class="nav-bar">
+                        <a href="/sessions/new">Login</a>
+                    </li>
+                    <li class="nav-bar">
+                        <a href="/cart">Cart</a>
+                    </li>
+                </ul>
+                <% } %>
+    </div>
+
 </nav>

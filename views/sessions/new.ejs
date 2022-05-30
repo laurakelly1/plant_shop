@@ -8,7 +8,7 @@
     <header>
         <%- include('../partials/header.ejs'); %> 
     </header>
-
+<div class="container">
     <h2>Login</h2>
 
     <form action='/sessions' method='POST'>
@@ -18,11 +18,13 @@
 		<label for="password">Password:</label>
 		<input type="password" name="password" id="password" />
 
-		<input type="submit" value="Login">
+		<input class="btn waves-effect waves-light" type="submit" value="Login">
 	</form>
 
      <!-- Link to register an account -->
      <a href="/users/new">Not registered? Click here</a>
+</div>
+    
 
     <footer>
         <%- include('../partials/footer.ejs'); %> 

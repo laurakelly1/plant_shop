@@ -10,7 +10,12 @@
     <header>
         <%- include('./partials/header.ejs'); %>
     </header>
-    <best-Sellers>
+
+    <div class="gallery">
+
+    </div>
+    <section>
+      <best-Sellers>
         <h2>Best Sellers</h2>
         <ul>
             <% for(let i=0; i < plants.length; i++) {%>
@@ -24,7 +29,9 @@
                 <% } %>
              <% } %>
         </ul>
-    </best-Sellers>
+    </best-Sellers>  
+    </section>
+    
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>
