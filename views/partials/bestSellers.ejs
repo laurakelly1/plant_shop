@@ -1,0 +1,19 @@
+<div class="container">
+
+    <h2>Best Sellers</h2>
+    <div class="best-Sellers">
+        <% for(let i=0; i < plants.length; i++) {%>
+
+            <% if (plants[i].bestSeller==true) { %>
+                <div class="best-seller-item">
+                    <a href="/shop/<%= plants[i]._id %>">
+                        <img class="bestSeller-image" src="<%= plants[i].image %> " />
+                        <br/>
+                        <%= plants[i].name %>
+                    </a>
+                </div>
+
+                <% } %>
+                    <% } %>
+    </divbest-Sellers>
+</div>

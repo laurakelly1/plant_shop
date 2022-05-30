@@ -14,24 +14,10 @@
     <div class="gallery">
 
     </div>
-    <section>
-      <best-Sellers>
-        <h2>Best Sellers</h2>
-        <ul>
-            <% for(let i=0; i < plants.length; i++) {%>
-
-                <% if (plants[i].bestSeller==true) { %>
-                    <li>
-                        <a href="/shop/<%= plants[i]._id %>">
-                            <%= plants[i].name %>
-                        </a>
-                    </li>
-                <% } %>
-             <% } %>
-        </ul>
-    </best-Sellers>  
-    </section>
     
+    <!-- Best Sellers -->
+    <%- include('./partials/bestSellers.ejs'); %>
+
     <footer>
         <%- include('./partials/footer.ejs'); %>
     </footer>
