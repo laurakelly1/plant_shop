@@ -11,7 +11,9 @@
     <header>
         <%- include('./partials/header.ejs'); %>
     </header>
-    <h2>Welcome <%= currentUser.firstName %>! </h2>
+    <div class="main">
+        <br/>
+        <h2>Welcome <%= currentUser.firstName %>! </h2>
     <div class="gallery">
 
     </div>
@@ -20,6 +22,8 @@
 
     <!-- Best Sellers -->
     <%- include('./partials/bestSellers.ejs'); %>
+    </div>
+    
 
         <footer>
             <%- include('./partials/footer.ejs'); %>

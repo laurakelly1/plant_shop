@@ -14,11 +14,10 @@
                     <a class="nav-bar" href="/shop">Shop All</a>
                 </li>
                 <li>
-                    <a>
-                        <form class="nav-bar" class="logout-button" action="/sessions?_method=DELETE" method="POST">
-                            <input type="submit" value="Log Out" />
-                        </form>
-                    </a>
+                    <form class="nav-bar"  action="/sessions?_method=DELETE" method="POST">
+                        <a class="logout-button"><input class="logout-button" type="submit" value="Log Out" /></a>
+                    </form>
+
                 </li>
                 <li>
                     <a class="nav-bar" href="/cart">Cart</a>
@@ -26,8 +25,8 @@
             </ul>
             <% } else { %>
                 <ul>
-                    <li >
-                        <a class="nav-bar"href="/shop">Shop All</a>
+                    <li>
+                        <a class="nav-bar" href="/shop">Shop All</a>
                     </li>
                     <li>
                         <a class="nav-bar" href="/sessions/new">Login</a>

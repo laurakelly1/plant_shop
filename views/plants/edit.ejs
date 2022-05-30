@@ -11,33 +11,37 @@
     <header>
         <%- include('../partials/header.ejs'); %>
     </header>
-    <h2>Edit <%= plant.name %>
-    </h2>
-    <h3>
-        Plant Attributes
-    </h3>
-
-    <form action="/shop/<%= plant._id %>?_method=PUT" method="POST">
-        <fieldset class="plant-details">
-            <legend>Plant Details</legend>
-            <!-- name -->
-            <label for="name">Name
-            <input type="text" id="name" name='name' value="<%= plant.name %> " />
-            </label>
-            <!-- description -->
-            <label for="description">Description
-            <textarea id="description" name="description"><%= plant.description %> </textarea>
-            </label>
-            <!-- bestSeller -->
-            <label for="bestSeller">Best Seller<br/>
-                <input type="checkbox" class="filled-in" id="bestSeller" name="bestSeller" <%
-                    if(plant.bestSeller===true){ %> checked <% } %> />
-                    <span></span>
-            </label>
-        </fieldset>
-        <input type="submit" value="Update Plant" />
-    </form>
-
+    <div class="main">
+        <br/>
+        <h2>Edit
+        </h2>
+        <h3>
+            Plant Attributes
+        </h3>
+    
+        <form action="/shop/<%= plant._id %>?_method=PUT" method="POST">
+            <fieldset class="plant-details">
+                <legend>Plant Details</legend>
+                <!-- name -->
+                <label for="name">Name
+                <input type="text" id="name" name='name' value="<%= plant.name %> " />
+                </label>
+                <!-- description -->
+                <label for="description">Description
+                <textarea id="description" name="description"><%= plant.description %> </textarea>
+                </label>
+                <!-- bestSeller -->
+                <label for="bestSeller">Best Seller<br/>
+                    <input type="checkbox" class="filled-in" id="bestSeller" name="bestSeller" <%
+                        if(plant.bestSeller===true){ %> checked <% } %> />
+                        <span></span>
+                </label>
+            </fieldset>
+            <input type="submit" value="Update Plant" />
+        </form>
+    
+    </div>
+    
 
     <footer>
         <%- include('../partials/footer.ejs'); %>
