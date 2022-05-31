@@ -50,10 +50,10 @@ a.logout-button {
 
 /* INDEX/ DASHBOARD */
 .gallery {
-  height: 300px;
-  background-image: url("https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
+  height: 500px;
+  background-image: url("https://github.com/laurakelly1/plant_shop/blob/main/images/gallery-main.jpg?raw=true");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 55% 65%;
   background-size: cover;
 }
 .best-Sellers {
@@ -78,12 +78,12 @@ a.logout-button {
 .best-seller-item {
   text-align: center;
   margin-bottom: 5%;
+  border-top: 1px solid black;
 }
 .best-seller-link {
-    text-decoration: none;
+  text-decoration: none;
   color: inherit;
 }
-
 
 /* SHOW PAGE */
 .show-container {
