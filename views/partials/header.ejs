@@ -1,41 +1,43 @@
-<div class="top-bar">
-    NO ONE'S PLANT ... YOURS TO TAKE
-</div>
-<nav class="header">
-    <a id="title" class="brand-logo left" href="/">
-
-        planta nullius
-
-    </a>
-    <div class="right">
-        <% if(currentUser) { %>
-            <ul>
-                <li class="try">
-                    <a class="nav-bar" href="/shop">Shop All</a>
-                </li>
-                <li>
-                    <form class="nav-bar"  action="/sessions?_method=DELETE" method="POST">
-                        <a class="logout-button"><input class="logout-button" type="submit" value="Log Out" /></a>
-                    </form>
-
-                </li>
-                <li>
-                    <a class="nav-bar" href="/cart">Cart</a>
-                </li>
-            </ul>
-            <% } else { %>
+<div class="header">
+    <div class="top-bar">
+        NO ONE'S PLANT ... YOURS TO TAKE
+    </div>
+    <nav class="header">
+        <a id="title" class="brand-logo left" href="/">
+    
+            planta nullius
+    
+        </a>
+        <div class="right">
+            <% if(currentUser) { %>
                 <ul>
                     <li class="try">
                         <a class="nav-bar" href="/shop">Shop All</a>
                     </li>
                     <li>
-                        <a class="nav-bar" href="/sessions/new">Login</a>
+                        <form class="nav-bar"  action="/sessions?_method=DELETE" method="POST">
+                            <a class="logout-button"><input class="logout-button" type="submit" value="Log Out" /></a>
+                        </form>
+    
                     </li>
                     <li>
                         <a class="nav-bar" href="/cart">Cart</a>
                     </li>
                 </ul>
-                <% } %>
-    </div>
-
-</nav>
+                <% } else { %>
+                    <ul>
+                        <li class="try">
+                            <a class="nav-bar" href="/shop">Shop All</a>
+                        </li>
+                        <li>
+                            <a class="nav-bar" href="/sessions/new">Login</a>
+                        </li>
+                        <li>
+                            <a class="nav-bar" href="/cart">Cart</a>
+                        </li>
+                    </ul>
+                    <% } %>
+        </div>
+    
+    </nav>
+</div>

@@ -12,17 +12,26 @@
     </header>
 <div class="main">
     <br/>
-    <h2>Shop All</h2>
+    <h2 class="shop-heading">Shop All</h2>
 
-    <ul>
+    <div class="all-plants">
         <% for(let i=0; i < plants.length; i++) {%>
-            <li>
-                <a href="/shop/<%= plants[i]._id %>">
-                    <%= plants[i].name %>
-                </a>
-            </li>
-        <% } %>
-    </ul>
+                <div class="plants-item">
+                    <a class="plants-link" href="/shop/<%= plants[i]._id %>">
+                        <img class="plants-image growImage" src="<%= plants[i].image %> " />
+                        <br/>
+                    <div class="plants-text">
+                        <h5><%= plants[i].name %></h5>
+                        <br/>
+                        <%= plants[i].botanicalName  %> 
+                        <br/>
+                        Price: <%= plants[i].price  %> 
+                    </div>
+                        
+                    </a>
+                </div>
+                    <% } %>
+    </div>
 
 </div>
     

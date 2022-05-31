@@ -4,6 +4,10 @@ body {
 }
 
 /* HEADER */
+.header {
+    position: fixed;
+    z-index: 999;
+}
 .top-bar {
   position: fixed;
   top: 0;
@@ -48,7 +52,7 @@ a.logout-button {
   margin-top: 85px;
 }
 
-/* INDEX/ DASHBOARD */
+/* MAIN / DASHBOARD */
 .gallery {
   height: 500px;
   background-image: url("https://github.com/laurakelly1/plant_shop/blob/main/images/gallery-main.jpg?raw=true");
@@ -65,24 +69,65 @@ a.logout-button {
 .bestSeller-image {
   height: 30vh;
   margin: 2%;
+  margin-bottom: 4%;
 }
 .growImage {
   transition: all 0.2s ease-in-out;
 }
 .growImage:hover {
   transform: scale(1.1);
+  
 }
 .best-heading {
   text-align: center;
+  border-top: 1px solid black;
 }
 .best-seller-item {
   text-align: center;
   margin-bottom: 5%;
-  border-top: 1px solid black;
 }
 .best-seller-link {
   text-decoration: none;
   color: inherit;
+}
+.best-seller-text {
+  text-align: start;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* SHOP ALL */
+.shop-heading {
+    margin: 2% 10%;
+}
+.all-plants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 0 10%;
+}
+/* The less than sign mean child of, and the * means all elements */
+.all-plants>* {
+    flex: 0 0 calc(25% - 10px);
+}
+.plants-image {
+  height: 50vh;
+  margin: 2%;
+  margin-bottom: 4%;
+}
+.plants-item {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.plants-link {
+  text-decoration: none;
+  color: inherit;
+}
+.plants-text {
+  text-align: start;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 /* SHOW PAGE */
@@ -113,12 +158,13 @@ a.logout-button {
   height: 300px;
   overflow: auto;
   justify-content: space-between;
-  margin: 0 10%;
+  margin: 8%;
 }
 
 /* FOOTER */
 footer {
   line-height: 2em;
+  border-top: 1px solid black;
 }
 .footer-link {
   text-decoration: none;
