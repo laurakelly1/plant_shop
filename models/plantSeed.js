@@ -37,6 +37,35 @@ PlantSeed = [
     image: "https://images.unsplash.com/photo-1614594895304-fe7116ac3b58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
     bestSeller: false,
   },
+  {
+    name: "Pink Arrowhead",
+    description: "Beautiful climbing plant of the pink variety. Happy to be a bush or a vine, depending on how you grow it.",
+    type: [ "Vine", "Evergreen", "Araceae"],
+    botanicalName: "Syngonium Neon Robusta",
+    price: 55.60,
+    quantity: 17,
+    image: "https://images.unsplash.com/photo-1632125736252-b5559dc596d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    bestSeller: false,
+  },
+  {
+    name: "Parlor Ivy",
+    description: "Glossy, green heart-shaped leaves on cascading stems. Can survive for long periods of time in low light.",
+    type: [ "Araceae", "Evergreen", "Tropical"],
+    botanicalName: "Philodendron hederaceum",
+    price: 44.90,
+    quantity: 26,
+    image: "https://images.unsplash.com/photo-1624622434922-ab4f0662fb74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+    bestSeller: false,
+  },{
+    name: "Aglaonema",
+    description: "With its unique and lush foliage, easy care, and ability to adapt to almost any home, it's hard to find a more versatile stunner!",
+    type: [ "Perennial", "Evergreen", "Araceae"],
+    botanicalName: "Aglaonema Cocomelon",
+    price: 29.99,
+    quantity: 40,
+    image: "https://images.unsplash.com/photo-1631694109908-79d700217271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+    bestSeller: true,
+  },
 ]
 
 module.exports = PlantSeed;

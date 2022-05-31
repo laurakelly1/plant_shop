@@ -10,7 +10,6 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 <li>Node.js</li>
 <li>CSS3</li>
 <li>JavaScript</li>
-<li>jQuery</li>
 <li>Google Fonts</li>
 <li>MongoDB and Mongoose</li>
 </ul>
@@ -21,7 +20,7 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 </p>
 
 <h2> Getting Started</h2>
-<!-- <a href="https://laurakelly1.github.io/wall-art-app/" target="_blank">Click here</a> to see your favourite pieces from the Art Institute of Chicago presented on your living room wall! -->
+<a href="https://planta-nullius.herokuapp.com/shop" target="_blank">Click here</a> to shop fabulous plants at planta nullius!
 
 <h2>Future Enhancements</h2>
 <!-- <li>Allow user to pick the room (bathroom, kitchen etc.) </li>

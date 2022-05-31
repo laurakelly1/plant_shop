@@ -36,7 +36,6 @@ input {
 .logout-button {
     color: black;
     padding: 0 15px;
-
 }
 
 a.logout-button {
@@ -46,6 +45,7 @@ a.logout-button {
 .main {
   margin-top: 80px;
 }
+
 
 /* INDEX/ DASHBOARD */
 .gallery {
