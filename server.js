@@ -14,9 +14,9 @@ mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
+const db = mongoose.connection;
 db.on("error", (err) => console.log(err.message + " is mongod not running?"));
-db.on("connected", () => console.log("mongod connected: ", MONGODB_URI));
+db.on("connected", () => console.log("mongod connected"));
 db.on("disconnected", () => console.log("mongod disconnected"));
 
 // // LOCAL
@@ -26,7 +26,7 @@ db.on("disconnected", () => console.log("mongod disconnected"));
 // });
 
 // // Database Connection Error / Success
-// const db = mongoose.connection;
+
 // db.on("error", (err) => console.log(err.message + " is mongod not running?"));
 // db.on("connected", () => console.log("mongo connected"));
 // db.on("disconnected", () => console.log("mongo disconnected"));
