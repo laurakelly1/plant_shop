@@ -11,62 +11,98 @@
     <header>
         <%- include('../partials/header.ejs'); %>
     </header>
-    
-        <div class="show-page">
-            <div class="container">
-                <div class="show-container">
+
+    <div class="show-page">
+     
+            <div class="show-container">
                 <div class="side-img">
                     <img src="<%= plant.image %> " />
                 </div>
-    
+
                 <div class="side-show">
                     <h2 class="show-heading">
                         <%= plant.name %>
                     </h2>
-                    <%= plant.description %>
+                    <h5 class="show-botanic">
                         <%= plant.botanicalName %>
-                            <%= plant.type %>
-                                $<%= plant.price %>
-                                    Quantity: <%= plant.quantity %>
-                                        <!-- edit -->
-                                        <a href="/shop/<%= plant._id %>/edit">Edit Plant</a>
-    
-                                        <!-- delete -->
-                                        <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
-                                            <input type="submit" value="Delete Plant" />
-                                        </form>
-                </div>
+                    </h5>
+                    <div class="show-description">
+                        <%= plant.description %>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>
+                               Types 
+                            </th>
+                            <td>
+                                <%= plant.type.join(', ') %> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Price
+                            </th>
+                            <td>
+                                $ <%= plant.price %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Quantity
+                            </th>
+                            <td>
+                               <%= plant.quantity %> 
+                            </td>
+                        </tr>
+                    </table>
+
+                       <div class="show-buttons">
+                        <!-- edit -->
+                        <a href="/shop/<%= plant._id %>/edit" class="waves-effect waves-light btn-large  light-green darken-1" >Edit Plant</a>
+
+                        <!-- delete -->
+                        <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
+                            <input class="waves-effect waves-light btn-large red accent-1" type="submit" value="Delete Plant" />
+                        </form>
+                    </div>
+
                 </div>
             </div>
-            <div class="recommendations">
-                <h4>Other plants that need homes</h4>
-                <div class="rec-list">
-                    <!-- This finds plants with the same type elements as plant -->
-                    <% let allRecommend=[]; for ( let i=0; i < plants.length; i++) { for ( let j=0; j <
-                        plants[i].type.length; j++) { for ( let k=0; k < plant.type.length; k++) { if (
-                        plants[i].type[j]===plant.type[k] && plant.name !=plants[i].name ) {
-                        allRecommend.push(plants[i].name); } } } } %>
-    
-                        <!-- This removes duplicates -->
-                        <% let recommend=[]; for ( let i=0; i < allRecommend.length; i++) { let exists=false; for ( let j=0;
-                            j < recommend.length; j++) { if (allRecommend[i]===recommend[j]) { exists=true; break; } } if
-                            (!exists) { recommend.push(allRecommend[i]); } } %>
-    
-                            <!-- This prints recommandations to page. -->
-                            <% for ( let i=0; i < plants.length; i++) { for (let j=0; j < recommend.length; j++) { if (
-                                plants[i].name==recommend[j]) { %>
-                                <div class="rec-element">
-                                    <a href="/shop/<%= plants[i].id %>">
-                                        <img class="bestSeller-image" src="<%= plants[i].image %> " />
-                                        <br />
-                                        <%= plants[i].name %>
-                                    </a>
-                                </div>
-                                <% } } } %>
-                </div>
+      
+        <div class="recommendations">
+            <h4 class="rec-heading">Other plants you might like</h4>
+            <div class="rec-list">
+                <!-- This finds plants with the same type elements as plant -->
+                <% let allRecommend=[]; for ( let i=0; i < plants.length; i++) { for ( let j=0; j <
+                    plants[i].type.length; j++) { for ( let k=0; k < plant.type.length; k++) { if (
+                    plants[i].type[j]===plant.type[k] && plant.name !=plants[i].name ) {
+                    allRecommend.push(plants[i].name); } } } } %>
+
+                    <!-- This removes duplicates -->
+                    <% let recommend=[]; for ( let i=0; i < allRecommend.length; i++) { let exists=false; for ( let j=0;
+                        j < recommend.length; j++) { if (allRecommend[i]===recommend[j]) { exists=true; break; } } if
+                        (!exists) { recommend.push(allRecommend[i]); } } %>
+
+                        <!-- This prints recommandations to page. -->
+                        <% for ( let i=0; i < plants.length; i++) { for (let j=0; j < recommend.length; j++) { if (
+                            plants[i].name==recommend[j]) { %>
+                            <div class="rec-element">
+                                <a class="rec-link" href="/shop/<%= plants[i].id %>">
+                                    <img class="rec-image growImage" src="<%= plants[i].image %> " />
+                                    <div class="rec-text">
+                                        <h5>
+                                            <%= plants[i].name %>
+                                        </h5>
+                                        Price: $ <%= plants[i].price %>
+                                    </div>
+
+                                </a>
+                            </div>
+                            <% } } } %>
             </div>
         </div>
-        
+    </div>
+
     </div>
 
 

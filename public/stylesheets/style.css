@@ -5,8 +5,8 @@ body {
 
 /* HEADER */
 .header {
-    position: fixed;
-    z-index: 999;
+  position: fixed;
+  z-index: 999;
 }
 .top-bar {
   position: fixed;
@@ -62,10 +62,13 @@ a.logout-button {
 }
 .best-Sellers {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 10px;
   margin: 0 10%;
 }
+
 .bestSeller-image {
   height: 30vh;
   margin: 2%;
@@ -76,7 +79,6 @@ a.logout-button {
 }
 .growImage:hover {
   transform: scale(1.1);
-  
 }
 .best-heading {
   text-align: center;
@@ -98,7 +100,7 @@ a.logout-button {
 
 /* SHOP ALL */
 .shop-heading {
-    margin: 2% 10%;
+  margin: 2% 10%;
 }
 .all-plants {
   display: flex;
@@ -108,8 +110,8 @@ a.logout-button {
   margin: 0 10%;
 }
 /* The less than sign mean child of, and the * means all elements */
-.all-plants>* {
-    flex: 0 0 calc(25% - 10px);
+.all-plants > * {
+  flex: 0 0 calc(25% - 10px);
 }
 .plants-image {
   height: 50vh;
@@ -133,32 +135,81 @@ a.logout-button {
 /* SHOW PAGE */
 .show-container {
   display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 50px;
 }
 
+.side-img {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  width: auto;
+  padding: 2%;
+}
+.side-show {
+    width: 40%;
+}
 .show-heading {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 10px;
 }
-
-.side-img {
-  display: flex;
-  height: 50vh;
-  width: auto;
-  border: 1px solid black;
-  margin: 20px;
+.show-botanic {
+    padding: 2%;
+}
+.show-description {
+    border-top: 1px solid black;
+    padding: 2%
+}
+.show-types {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 0 6%;
+}
+.show-types-heading {
+    border-right: 1px solid black;
+    padding-right: 15%;
+   }
+.show-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10% 0%;
+    gap: 10px
 }
 
+/* RECOMMENDATION BAR */
 .recommendations {
   background-color: rgb(230, 230, 230);
 }
-
+.rec-heading {
+  margin-left: 5%;
+}
 .rec-list {
   display: flex;
   height: 300px;
   overflow: auto;
   justify-content: space-between;
-  margin: 8%;
+  margin: 0 8%;
+}
+.rec-element {
+  text-align: center;
+}
+.rec-link {
+  text-decoration: none;
+  color: inherit;
+}
+.rec-image {
+  height: 20vh;
+  margin: 2%;
+  margin-bottom: 4%;
+}
+.rec-text {
+  text-align: start;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 /* FOOTER */
@@ -175,7 +226,7 @@ footer {
 }
 
 .main-footer {
-  background-color: rgb(208, 208, 208);
+  background-color: #9ca890;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
