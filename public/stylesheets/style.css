@@ -1,6 +1,6 @@
 body {
   background-color: #f1f8e9;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 /* HEADER */
@@ -34,20 +34,19 @@ input {
   all: inherit;
 }
 .logout-button {
-    color: black;
-    padding: 0 15px;
+  color: black;
+  padding: 0 15px;
 }
 
 a.logout-button {
-    padding: 0;
+  padding: 0;
 }
 .main {
-    margin-top: 85px;
+  margin-top: 85px;
 }
 .container {
   margin-top: 85px;
 }
-
 
 /* INDEX/ DASHBOARD */
 .gallery {
@@ -65,13 +64,26 @@ a.logout-button {
 }
 .bestSeller-image {
   height: 30vh;
+  margin: 2%;
+}
+.growImage {
+  transition: all 0.2s ease-in-out;
+}
+.growImage:hover {
+  transform: scale(1.1);
 }
 .best-heading {
-    text-align: center;
+  text-align: center;
 }
 .best-seller-item {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 5%;
 }
+.best-seller-link {
+    text-decoration: none;
+  color: inherit;
+}
+
 
 /* SHOW PAGE */
 .show-container {
@@ -93,47 +105,51 @@ a.logout-button {
 }
 
 .recommendations {
-    background-color: rgb(230, 230, 230);
+  background-color: rgb(230, 230, 230);
 }
 
 .rec-list {
-    display: flex;
-    height: 300px;
-    overflow: auto;
-    justify-content: space-between;
-    margin: 0 10%;
+  display: flex;
+  height: 300px;
+  overflow: auto;
+  justify-content: space-between;
+  margin: 0 10%;
 }
 
 /* FOOTER */
 footer {
-    line-height: 2em;
-
+  line-height: 2em;
 }
-footer a,
-a:visited {
+.footer-link {
   text-decoration: none;
   color: inherit;
 }
-
-a:hover {
+.footer-link:hover {
   text-decoration: underline;
 }
+
 .main-footer {
-    background-color: rgb(208, 208, 208);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  background-color: rgb(208, 208, 208);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
 }
+
 .footer-element {
-    border-left: 1px solid black;
-    padding-left: 8%;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding-right: 8%;
+  padding-left: 8%;
+}
+.footer-image {
+  max-width: 100px;
 }
 .footer-end {
-    bottom: 0;
-    width: 100%;
-    color: white;
-    background-color: black;
-    padding: 1px;
-    text-align: center;
-    font-weight: 100;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 1px;
+  text-align: center;
+  font-weight: 100;
 }
