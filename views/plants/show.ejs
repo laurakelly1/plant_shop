@@ -13,48 +13,40 @@
     </header>
     <div class="main">
         <main class="show-container">
-        <div class="side-img">
-            <img src="<%= plant.image %> " />
-        </div>
+            <div class="side-img">
+                <img src="<%= plant.image %> " />
+            </div>
 
-        <div class="side-show">
-            <h2 class="show-heading">
-                <%= plant.name %>
-            </h2>
-            <ul>
-                <li>
-                   <%= plant.description %>
-                </li>
-            </ul>
-            <ul class="show-grid">
-                <li>
-                    <%= plant.botanicalName %> 
-                </li>
-                <li>
-                    <%= plant.type %> 
-                </li>
-            </ul>
-            <ul class="show-numbers">
-                <li>
-                    $<%= plant.price %> 
-                </li>
-                <li>
-                    Quantity: <%= plant.quantity %> 
-                </li>
-            </ul>
+            <div class="side-show">
+                <h2 class="show-heading">
+                    <%= plant.name %>
+                </h2>
+                <%= plant.description %>
 
-            <!-- edit -->
-            <a href="/shop/<%= plant._id %>/edit">Edit Plant</a>
 
-            <!-- delete -->
-            <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete Plant" />
-            </form>
-        </div>
 
-    </main> 
+                    <%= plant.botanicalName %>
+
+
+                        <%= plant.type %>
+
+                            $<%= plant.price %>
+
+                                Quantity: <%= plant.quantity %>
+
+
+                                    <!-- edit -->
+                                    <a href="/shop/<%= plant._id %>/edit">Edit Plant</a>
+
+                                    <!-- delete -->
+                                    <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
+                                        <input type="submit" value="Delete Plant" />
+                                    </form>
+            </div>
+
+        </main>
     </div>
-   
+
 
 
 
