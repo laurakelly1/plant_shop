@@ -12,6 +12,7 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 <li>JavaScript</li>
 <li>Google Fonts</li>
 <li>MongoDB and Mongoose</li>
+<li>Heroku</li>
 </ul>
 
 <h2>Screenshots</h2>

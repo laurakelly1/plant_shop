@@ -41,9 +41,11 @@ input {
 a.logout-button {
     padding: 0;
 }
-
 .main {
-  margin-top: 80px;
+    margin-top: 85px;
+}
+.container {
+  margin-top: 85px;
 }
 
 
@@ -80,4 +82,16 @@ a.logout-button {
   width: auto;
   border: 1px solid black;
   margin: 20px;
+}
+
+.recommendations {
+    background-color: rgb(230, 230, 230);
+}
+
+.rec-list {
+    display: flex;
+    height: 300px;
+    overflow: auto;
+    justify-content: space-between;
+    margin: 0 10%;
 }
