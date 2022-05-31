@@ -84,7 +84,8 @@ plantRouter.get('/:id', (req, res) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/show.ejs', {
             plant: foundPlant,
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
+            plants: PlantSeed,
         });
     });
 });

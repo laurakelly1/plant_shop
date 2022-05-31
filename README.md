@@ -20,7 +20,7 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 </p>
 
 <h2> Getting Started</h2>
-<a href="https://planta-nullius.herokuapp.com/shop" target="_blank">Click here</a> to shop fabulous plants at planta nullius!
+<a href="https://planta-nullius.herokuapp.com" target="_blank">Click here</a> to shop fabulous plants at planta nullius!
 
 <h2>Future Enhancements</h2>
 <!-- <li>Allow user to pick the room (bathroom, kitchen etc.) </li>

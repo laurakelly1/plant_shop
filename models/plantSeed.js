@@ -2,7 +2,7 @@ PlantSeed = [
     {
     name: "Monstera",
     description: "Glossy green, heart-shaped foliage with signature Swiss-cheese like holes in large leaves.",
-    type: [ "Evergreen",  "Araceae"],
+    type: ["Araceae"],
     botanicalName: "Monstera Deliciosa",
     price: 49.99,
     quantity: 13,
@@ -12,7 +12,7 @@ PlantSeed = [
   {
     name: "Satin Pothos",
     description: "Tropical vine with heart-shaped leaves that have silvery grey splotches, which makes them look almost shiny.",
-    type: [ "Arum", "Evergreen", "Tropical", "Vine" ],
+    type: [ "Arum", "Tropical", "Vine" ],
     botanicalName: "Scindapsus pictus",
     price: 18.90,
     quantity: 30,
@@ -21,7 +21,7 @@ PlantSeed = [
   },{
     name: "Money Plant",
     description: "The attractive coin shaped leaves of this plant is the reason why it has been an ornamental plant since 1912.",
-    type: ["Urticaceae", "Evergreen", "Perennial"],
+    type: ["Urticaceae", "Perennial"],
     botanicalName: "Pilea peperomioides",
     price: 41.79,
     quantity: 26,
@@ -30,7 +30,7 @@ PlantSeed = [
   },{
     name: "ZZ Plant",
     description: "Smooth, waxy, dark green, leaves that reflect sunlight and brighten rooms. Very little care needed to thrive in your home.",
-    type: [ "Araceae", "Tropical", "Evergreen", "Air purifying"],
+    type: [ "Araceae", "Tropical", "Air purifying"],
     botanicalName: "Zamioculcas zamiifolia",
     price: 24.99,
     quantity: 42,
@@ -40,7 +40,7 @@ PlantSeed = [
   {
     name: "Pink Arrowhead",
     description: "Beautiful climbing plant of the pink variety. Happy to be a bush or a vine, depending on how you grow it.",
-    type: [ "Vine", "Evergreen", "Araceae"],
+    type: [ "Vine", "Araceae"],
     botanicalName: "Syngonium Neon Robusta",
     price: 55.60,
     quantity: 17,
