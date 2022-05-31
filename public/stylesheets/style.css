@@ -177,7 +177,7 @@ a.logout-button {
     display: flex;
     justify-content: flex-start;
     margin: 10% 0%;
-    gap: 10px
+    gap: 10px;
 }
 
 /* RECOMMENDATION BAR */
@@ -212,6 +212,14 @@ a.logout-button {
   border-bottom: 1px solid black;
 }
 
+/* EDIT PAGE */
+.edit-main {
+    margin: 0 10%;
+    margin-top: 60px;
+}
+
+
+
 /* FOOTER */
 footer {
   line-height: 2em;
@@ -226,7 +234,7 @@ footer {
 }
 
 .main-footer {
-  background-color: #9ca890;
+  background-color: #afb9a6;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
