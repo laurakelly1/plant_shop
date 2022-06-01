@@ -44,7 +44,11 @@ plantRouter.put('/:id', (req, res) => {
         req.body.bestSeller = true;
     } else {
         req.body.bestSeller = false;
-    }
+    };
+
+    let type = req.body.type.split(",");
+    req.body.type = type;
+    Plant[req.params.id] = req.body;
     Plant.findByIdAndUpdate(
         req.params.id, 
         req.body, 

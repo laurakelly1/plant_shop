@@ -77,7 +77,7 @@ PlantSeed = [
     bestSeller: false,
   },
   {
-    name: "Ecuador Philodendron",
+    name: "Philodendron",
     description: "A stunning philodendron known for its large and impressive heart-shaped leaves. It is native to parts of Central and South America.",
     type: [ "Araceae", "Climbing plant", "Tropical"],
     botanicalName: "Philodendron verrucosum",
