@@ -98,6 +98,19 @@ a.logout-button {
   border-bottom: 1px solid black;
 }
 
+/* LOGIN & REGISTER PAGES */
+.login-container, .register-container {
+  margin: 10% 30%;
+}
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.login-button-green {
+  width: 180px;
+}
+
+
 /* SHOP ALL */
 .shop-heading {
   margin: 2% 10%;
@@ -175,7 +188,7 @@ a.logout-button {
 }
 .show-buttons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: baseline;
   margin: 10% 0%;
   gap: 10px;
 }
@@ -219,21 +232,18 @@ a.logout-button {
   margin-top: 120px;
 }
 .edit-main {
-    width: 80vw;
-    height: auto;
-    margin: 50px auto;
-    display: flex;
-    box-shadow: 1px 1px 10px #ddd,
-                -1px -1px 10px #ddd,
-                1px -1px 10px #ddd,
-                -1px 1px 10px #ddd;
+  width: 80vw;
+  height: auto;
+  margin: 50px auto;
+  display: flex;
+  box-shadow: 1px 1px 10px #ddd, -1px -1px 10px #ddd, 1px -1px 10px #ddd,
+    -1px 1px 10px #ddd;
 }
 .edit-box {
   margin: 0 5%;
   padding: 5px;
   box-sizing: border-box;
   overflow: auto;
-  
 }
 .edit-image {
   width: 120%;
@@ -241,48 +251,74 @@ a.logout-button {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.edit-data {
-    position: center;
+
+fieldset {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 20px;
+  margin: 20px 0;
+}
+legend {
+  padding: 0px 10px;
+  font-weight: 500;
+}
+label {
+  font-weight: 200;
+  color: black;
+}
+input.edit, input.new,
+textarea {
+    color: black;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+textarea {
+  resize: none;
+  height: 75px;
+  font-weight: 200;
+}
+textarea:focus {
+  outline: 0;
+  border: 2px solid teal;
 }
 .edit-button {
-    margin: 1%;
+    margin: 1% 0%;
 }
+
 
 /* NEW PAGE */
 .new-heading {
-    margin: 50px;
-    margin-top: 120px;
-  }
-  .new-main {
-      width: 80vw;
-      height: auto;
-      margin: 50px auto;
-      display: flex;
-      box-shadow: 1px 1px 10px #ddd,
-                  -1px -1px 10px #ddd,
-                  1px -1px 10px #ddd,
-                  -1px 1px 10px #ddd;
-  }
-  .new-box {
-    margin: 0 5%;
-    padding: 5px;
-    box-sizing: border-box;
-    overflow: auto;
-    
-  }
-  .new-image {
-    width: 120%;
-    background: url("https://github.com/laurakelly1/plant_shop/blob/main/images/new-image.jpg?raw=true");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .new-data {
-      position: center;
-  }
-  .new-button {
-      margin: 1%;
-  }
-  
+  margin: 50px;
+  margin-top: 120px;
+}
+.new-main {
+  width: 80vw;
+  height: auto;
+  margin: 50px auto;
+  display: flex;
+  box-shadow: 1px 1px 10px #ddd, -1px -1px 10px #ddd, 1px -1px 10px #ddd,
+    -1px 1px 10px #ddd;
+}
+.new-box {
+  margin: 0 5%;
+  padding: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.new-image {
+  width: 120%;
+  background: url("https://github.com/laurakelly1/plant_shop/blob/main/images/new-image.jpg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.new-data {
+  position: center;
+}
+.new-button {
+  margin: 1%;
+}
 
 /* FOOTER */
 footer {

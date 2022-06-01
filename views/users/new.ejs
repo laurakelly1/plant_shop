@@ -8,8 +8,9 @@
     <header>
         <%- include('../partials/header.ejs'); %> 
     </header>
-<div class="main" class="container">
+<div class="main">
     <br/>
+<div class="register-container">
     <h2>Register</h2>
 
     <form action='/users' method='POST'>
@@ -22,8 +23,10 @@
 		<label for="password">Password:</label>
 		<input type="password" name="password" id="password" />
 
-		<input type="submit" value="Register">
+		<input class="login-button-green btn waves-effect waves-light light-green darken-1" type="submit" value="Register">
 	</form>
+</div>
+    
 </div>
     
 

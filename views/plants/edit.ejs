@@ -12,7 +12,7 @@
         <%- include('../partials/header.ejs'); %>
     </header>
     <br />
-    <h2 class="edit-heading">Edit
+    <h2 class="edit-heading">Edit Plant
     </h2>
     <div class="edit-main">
 
@@ -24,11 +24,11 @@
                     <legend>Plant Details</legend>
                     <!-- name -->
                     <label for="name">Name
-                        <input type="text" id="name" name='name' value="<%= plant.name %> " />
+                        <input class='edit' type="text" id="name" name='name' value="<%= plant.name %> " />
                     </label>
                     <!-- botantical name -->
                     <label for="botanicalName">Botantical Name
-                        <input type="text" id="botanicalName" name='botanicalName'
+                        <input class='edit' type="text" id="botanicalName" name='botanicalName'
                             value="<%= plant.botanicalName %> " />
                     </label>
                     <!-- description -->
@@ -37,27 +37,27 @@
                     </label>
                     <!-- type -->
                     <label for="type">Type
-                        <input type="text" id="type" name="type" value="<%= plant.type.join(" , ")%>"></input>
+                        <input class='edit'  type="text" id="type" name="type" value="<%= plant.type.join(" , ")%>"></input>
                     </label>
                     <!-- image address -->
                     <label for="image">Image address
-                        <input type="text" id="image" name='image' value="<%= plant.image %> " />
+                        <input class='edit' type="text" id="image" name='image' value="<%= plant.image %> " />
                     </label>
                 </fieldset>
                 <fieldset class="plant-data">
                     <legend>Plant Data</legend>
                     <!-- price -->
                     <label for="price">Price
-                        <input type="text" id="price" name='price' value="<%= plant.price %> " />
+                        <input class='edit' type="text" id="price" name='price' value="<%= plant.price %> " />
                     </label>
                     <!-- quantity -->
                     <label for="quantity">Quantity
-                        <input type="text" id="quantity" name='quantity' value="<%= plant.quantity %> " />
+                        <input class='edit' type="text" id="quantity" name='quantity' value="<%= plant.quantity %> " />
                     </label>
 
                     <!-- bestSeller -->
                     <label for="bestSeller">Best Seller<br />
-                        <input type="checkbox" class="filled-in light-green darken-1" id="bestSeller" name="bestSeller"
+                        <input class='edit' type="checkbox" class="checked" id="bestSeller" name="bestSeller"
                             <% if(plant.bestSeller===true){ %> checked <% } %> />
 
                             <span></span>
