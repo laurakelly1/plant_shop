@@ -53,6 +53,15 @@ a.logout-button {
 }
 
 /* MAIN / DASHBOARD */
+.dashboard-features {
+    margin: 3%;
+    text-align: center;
+}
+.dash-button {
+    display: flex;
+    justify-content: center;
+        gap: 10px;
+}
 .gallery {
   height: 500px;
   background-image: url("https://github.com/laurakelly1/plant_shop/blob/main/images/gallery-main.jpg?raw=true");
@@ -324,6 +333,7 @@ textarea:focus {
 footer {
   line-height: 2em;
   border-top: 1px solid black;
+
 }
 .footer-link {
   text-decoration: none;
@@ -338,6 +348,7 @@ footer {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
+
 }
 
 .footer-element {
@@ -350,7 +361,7 @@ footer {
   max-width: 100px;
 }
 .footer-end {
-  bottom: 0;
+   bottom: 0;
   width: 100%;
   color: white;
   background-color: black;

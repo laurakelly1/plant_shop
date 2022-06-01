@@ -57,8 +57,13 @@
                     </table>
 
                        <div class="show-buttons">
-                        <!-- buy-->
-                        <a href="#" class="waves-effect waves-light btn-large  light-green darken-1" >Add to Cart</a>
+                        <!-- edit -->
+                        <a href="/shop/<%= plant._id %>/edit" class="waves-effect waves-light btn-large  light-green darken-1" >Edit Plant</a>
+
+                        <!-- delete -->
+                        <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
+                            <input class="waves-effect waves-light btn-large red accent-1" type="submit" value="Delete Plant" />
+                        </form>
                     </div>
 
                 </div>
@@ -99,13 +104,6 @@
     </div>
 
     </div>
-
-
-
-
-
-
-
 
     <footer>
         <%- include('../partials/footer.ejs'); %>

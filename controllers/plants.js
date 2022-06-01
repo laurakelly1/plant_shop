@@ -88,14 +88,22 @@ plantRouter.get('/:id/edit', (req, res) => {
 plantRouter.get('/:id', (req, res) => {
     Plant.find({}, (error, allPlants) => {
         Plant.findById(req.params.id, (error, foundPlant) => {
-        res.render('plants/show.ejs', {
+            if (req.session.currentUser) {
+                res.render('plants/show-admin.ejs', {
+                    plant: foundPlant,
+                    currentUser: req.session.currentUser,
+                    plants: allPlants,
+                });
+            } else {
+                res.render('plants/show.ejs', {
             plant: foundPlant,
             currentUser: req.session.currentUser,
             plants: allPlants,
         });
+            }
+        
     });
-    })
-    
+    })    
 });
 
 module.exports = plantRouter;

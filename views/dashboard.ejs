@@ -13,13 +13,23 @@
     </header>
     <div class="main">
         <br/>
-        <h2>Welcome <%= currentUser.firstName %>! </h2>
-    <div class="gallery">
+        <div class="dashboard-features">
+
+            <h2>Welcome, <%= currentUser.firstName %>! </h2>
+            <div class="dash-button">
+            <a class="waves-effect waves-light btn-large  light-green darken-1" href="/shop/new">Create new plant</a>
+            <a class="waves-effect waves-light btn-large  light-green darken-1" href="/shop/#">Add to Gallery</a>
+
+            </div>
+            
+       </div>
+        
+    
+
+    
+<div class="gallery">
 
     </div>
-
-    <a href="/shop/new">Create new plant</a>
-
     <!-- Best Sellers -->
     <%- include('./partials/bestSellers.ejs'); %>
     </div>
