@@ -54,13 +54,13 @@ a.logout-button {
 
 /* MAIN / DASHBOARD */
 .dashboard-features {
-    margin: 3%;
-    text-align: center;
+  margin: 3%;
+  text-align: center;
 }
 .dash-button {
-    display: flex;
-    justify-content: center;
-        gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 .gallery {
   height: 500px;
@@ -69,6 +69,7 @@ a.logout-button {
   background-position: 55% 65%;
   background-size: cover;
 }
+
 .best-Sellers {
   display: flex;
   flex-flow: row wrap;
@@ -108,7 +109,8 @@ a.logout-button {
 }
 
 /* LOGIN & REGISTER PAGES */
-.login-container, .register-container {
+.login-container,
+.register-container {
   margin: 10% 30%;
 }
 .login-buttons {
@@ -118,7 +120,6 @@ a.logout-button {
 .login-button-green {
   width: 180px;
 }
-
 
 /* SHOP ALL */
 .shop-heading {
@@ -274,14 +275,14 @@ label {
   font-weight: 200;
   color: black;
 }
-input.edit, input.new,
+input.edit,
+input.new,
 textarea {
-    color: black;
+  color: black;
   width: 100%;
   margin: 10px 0;
   padding: 10px;
   box-sizing: border-box;
-
 }
 textarea {
   resize: none;
@@ -293,9 +294,8 @@ textarea:focus {
   border: 2px solid teal;
 }
 .edit-button {
-    margin: 1% 0%;
+  margin: 1% 0%;
 }
-
 
 /* NEW PAGE */
 .new-heading {
@@ -333,7 +333,6 @@ textarea:focus {
 footer {
   line-height: 2em;
   border-top: 1px solid black;
-
 }
 .footer-link {
   text-decoration: none;
@@ -348,7 +347,6 @@ footer {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-
 }
 
 .footer-element {
@@ -361,7 +359,7 @@ footer {
   max-width: 100px;
 }
 .footer-end {
-   bottom: 0;
+  bottom: 0;
   width: 100%;
   color: white;
   background-color: black;

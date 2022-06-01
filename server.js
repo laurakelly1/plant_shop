@@ -6,6 +6,25 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const Plant = require("./models/plants.js");
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const { document } = (new JSDOM('')).window;
+global.document = document;
+const $ = require( "jquery" )( window );
+
+// functions 
+const gallery = function() {
+    const slides = document.querySelectorAll(".slide")
+    
+    let curSlide = 0;
+    const nextSlide = document.querySelector(".btn-next");
+    nextSlide.addEventListener("click", function() {
+        curSlide++;
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${index - curSlide}%)`;
+    });
+    })
+}
 
 // Database Configuration
 // HEROKU
@@ -49,11 +68,17 @@ app.get("/", (req, res) => {
       res.render("dashboard.ejs", {
         currentUser: req.session.currentUser,
         plants: foundPlants,
+        document: document,
+        $: $,
+        gallery: gallery,
       });
     } else {
       res.render("index.ejs", {
         currentUser: req.session.currentUser,
         plants: foundPlants,
+        document: document,
+        $: $,
+        gallery: gallery,
       });
     }
   });
@@ -65,3 +90,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Listening...");
 });
+
