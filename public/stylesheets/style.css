@@ -214,31 +214,37 @@ a.logout-button {
 
 /* EDIT PAGE */
 .edit-heading {
-  margin: 50px auto;
+  margin: 50px;
   margin-top: 120px;
 }
 .edit-main {
-  width: 80vw;
-  height: 70vw;
-  margin: 50px auto;
-  display: flex;
-  box-shadow: 1px 1px 10px #ddd, -1px -1px 10px #ddd, 1px -1px 10px #ddd,
-    -1px 1px 10px #ddd;
+    width: 80vw;
+    height: auto;
+    margin: 50px auto;
+    display: flex;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
 }
 .edit-box {
-  margin: 0 10%;
-  width: 50%;
-  padding: 15px;
+  margin: 0 5%;
+  padding: 5px;
   box-sizing: border-box;
   overflow: auto;
+  
 }
 .edit-image {
-  width: 50%;
+  width: 120%;
+  background: url("https://github.com/laurakelly1/plant_shop/blob/main/images/edit-image.jpg?raw=true");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.edit-image-file {
-  width: 300px;
+.edit-data {
+    position: center;
+}
+.edit-button {
+    margin: 1%;
 }
 
 /* FOOTER */

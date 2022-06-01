@@ -12,12 +12,11 @@
         <%- include('../partials/header.ejs'); %>
     </header>
     <br />
-        <h2 class="edit-heading">Edit
-        </h2>
+    <h2 class="edit-heading">Edit
+    </h2>
     <div class="edit-main">
-        
+
         <div class="edit-image">
-            <img class="edit-image-file" src="<%= plant.image %> " alt="<%=plant.name%>">
         </div>
         <div class="edit-data">
             <form class="edit-box" action="/shop/<%= plant._id %>?_method=PUT" method="POST">
@@ -66,7 +65,7 @@
                 </fieldset>
 
 
-                <input class="waves-effect waves-light btn-large  light-green darken-1" type="submit"
+                <input class="edit-button waves-effect waves-light btn-large  light-green darken-1" type="submit"
                     value="Update Plant" />
             </form>
 
