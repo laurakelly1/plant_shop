@@ -11,63 +11,68 @@
     <header>
         <%- include('../partials/header.ejs'); %>
     </header>
-    <div class="edit-main">
-        <br />
-        <h2>Edit
+    <br />
+        <h2 class="edit-heading">Edit
         </h2>
-        <h4 class="edit-subheading">
-            Plant Attributes
-        </h4>
+    <div class="edit-main">
+        
+        <div class="edit-image">
+            <img class="edit-image-file" src="<%= plant.image %> " alt="<%=plant.name%>">
+        </div>
+        <div class="edit-data">
+            <form class="edit-box" action="/shop/<%= plant._id %>?_method=PUT" method="POST">
+                <fieldset class="plant-details">
+                    <legend>Plant Details</legend>
+                    <!-- name -->
+                    <label for="name">Name
+                        <input type="text" id="name" name='name' value="<%= plant.name %> " />
+                    </label>
+                    <!-- botantical name -->
+                    <label for="botanicalName">Botantical Name
+                        <input type="text" id="botanicalName" name='botanicalName'
+                            value="<%= plant.botanicalName %> " />
+                    </label>
+                    <!-- description -->
+                    <label for="description">Description
+                        <textarea id="description" name="description"><%= plant.description %> </textarea>
+                    </label>
+                    <!-- type -->
+                    <label for="type">Type
+                        <input type="text" id="type" name="type" value="<%= plant.type.join(" , ")%>">" </input>
+                    </label>
+                    <!-- image address -->
+                    <label for="image">Image address
+                        <input type="text" id="image" name='image' value="<%= plant.image %> " />
+                    </label>
+                </fieldset>
+                <fieldset class="plant-data">
+                    <legend>Plant Data</legend>
+                    <!-- price -->
+                    <label for="price">Price
+                        <input type="number" id="price" name='price' value="<%= plant.price %> " />
+                    </label>
+                    <!-- quantity -->
+                    <label for="quantity">Quantity
+                        <input type="number" id="quantity" name='quantity' value="<%= plant.quantity %> " />
+                    </label>
 
-        <form class="edit-box" action="/shop/<%= plant._id %>?_method=PUT" method="POST">
-            <fieldset class="plant-details">
-                <legend>Plant Details</legend>
-                <!-- name -->
-                <label for="name">Name
-                    <input type="text" id="name" name='name' value="<%= plant.name %> " />
-                </label>
-                <!-- botantical name -->
-                <label for="botanicalName">Botantical Name
-                    <input type="text" id="botanicalName" name='botanicalName' value="<%= plant.botanicalName %> " />
-                </label>
-                <!-- description -->
-                <label for="description">Description
-                    <textarea id="description" name="description"><%= plant.description %> </textarea>
-                </label>
-                <!-- type -->
-                <label for="type">Type
-                    <input type="text" id="type" name="type" value="<%= plant.type.join(", ")%>">" </input>
-                </label>
-                <!-- image address -->
-                <label for="image">Image address
-                    <input type="text" id="image" name='image' value="<%= plant.image %> " />
-                </label>
-            </fieldset>
-            <h4 class="edit-subheading">
-                Plant Data
-            </h4>
-            <fieldset class="plant-data">
-                <!-- price -->
-                <label for="price">Price
-                    <input type="number" id="price" name='price' value="<%= plant.price %> " />
-                </label>
-                <!-- quantity -->
-                <label for="quantity">Quantity
-                    <input type="number" id="quantity" name='quantity' value="<%= plant.quantity %> " />
-                </label>
-                
-                <!-- bestSeller -->
-                <label for="bestSeller">Best Seller<br />
-                    <input type="checkbox" class="filled-in light-green darken-1" id="bestSeller" name="bestSeller" <%
-                        if(plant.bestSeller===true){ %> checked <% } %> />
+                    <!-- bestSeller -->
+                    <label for="bestSeller">Best Seller<br />
+                        <input type="checkbox" class="filled-in light-green darken-1" id="bestSeller" name="bestSeller"
+                            <% if(plant.bestSeller===true){ %> checked <% } %> />
 
-                        <span></span>
-                </label>
-            </fieldset>
-                
-            
-            <input class="waves-effect waves-light btn-large  light-green darken-1" type="submit" value="Update Plant" />
-        </form>
+                            <span></span>
+                    </label>
+                </fieldset>
+
+
+                <input class="waves-effect waves-light btn-large  light-green darken-1" type="submit"
+                    value="Update Plant" />
+            </form>
+
+        </div>
+
+
 
     </div>
 
