@@ -46,7 +46,7 @@ plantRouter.put('/:id', (req, res) => {
         req.body.bestSeller = false;
     };
 
-    let type = req.body.type.split(",");
+    let type = req.body.type.split(", ");
     req.body.type = type;
     Plant[req.params.id] = req.body;
     Plant.findByIdAndUpdate(
@@ -75,6 +75,7 @@ plantRouter.post('', (req, res) => {
 
 //E
 plantRouter.get('/:id/edit', (req, res) => {
+    
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/edit.ejs', {
             plant: foundPlant,
@@ -85,13 +86,16 @@ plantRouter.get('/:id/edit', (req, res) => {
 
 //S
 plantRouter.get('/:id', (req, res) => {
-    Plant.findById(req.params.id, (error, foundPlant) => {
+    Plant.find({}, (error, allPlants) => {
+        Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/show.ejs', {
             plant: foundPlant,
             currentUser: req.session.currentUser,
-            plants: PlantSeed,
+            plants: allPlants,
         });
     });
+    })
+    
 });
 
 module.exports = plantRouter;
