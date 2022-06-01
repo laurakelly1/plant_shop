@@ -217,7 +217,9 @@ a.logout-button {
     margin: 0 10%;
     margin-top: 60px;
 }
-
+.edit-box {
+    margin: 0 10%;
+}
 
 
 /* FOOTER */

@@ -66,6 +66,26 @@ PlantSeed = [
     image: "https://images.unsplash.com/photo-1631694109908-79d700217271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
     bestSeller: true,
   },
+  {
+    name: "Moonlight",
+    description: "This plant has a milky-green leaf color with a silver splash down the middle of the leaf following the vein. These beautiful leaves should be starting to curl before you water it.",
+    type: [ "Arum", "Tropical", "Vine" ],
+    botanicalName: "Scindapsus pictus trebie",
+    price: 21.50,
+    quantity: 40,
+    image: "https://images.unsplash.com/photo-1614242405942-f054ae008771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+    bestSeller: false,
+  },
+  {
+    name: "Ecuador Philodendron",
+    description: "A stunning philodendron known for its large and impressive heart-shaped leaves. It is native to parts of Central and South America.",
+    type: [ "Araceae", "Climbing plant", "Tropical"],
+    botanicalName: "Philodendron verrucosum",
+    price: 68.90,
+    quantity: 10,
+    image: "https://images.unsplash.com/photo-1609142621730-db3293839541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+    bestSeller: false,
+  }
 ]
 
 module.exports = PlantSeed;
