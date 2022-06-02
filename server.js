@@ -13,17 +13,15 @@ global.document = document;
 const $ = require( "jquery" )( window );
 
 // functions 
-const gallery = function() {
-    const slides = document.querySelectorAll(".slide")
-    
-    let curSlide = 0;
-    const nextSlide = document.querySelector(".btn-next");
-    nextSlide.addEventListener("click", function() {
-        curSlide++;
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${index - curSlide}%)`;
-    });
-    })
+const openCart = function() {
+    console.log("open");
+    document.getElementById("mySidebar").style.width = '250px';
+    document.getElementById("cart-main").style.marginLeft = "0";
+};
+const closeCart = function() {
+    console.log('close')
+    document.getElementById("mySidebar").style.width = '0';
+    document.getElementById("cart-main").style.marginLeft = "0";
 }
 
 // Database Configuration
@@ -69,16 +67,14 @@ app.get("/", (req, res) => {
         currentUser: req.session.currentUser,
         plants: foundPlants,
         document: document,
-        $: $,
-        gallery: gallery,
       });
     } else {
       res.render("index.ejs", {
         currentUser: req.session.currentUser,
         plants: foundPlants,
         document: document,
-        $: $,
-        gallery: gallery,
+        openCart: openCart,
+        closeCart: closeCart,
       });
     }
   });
