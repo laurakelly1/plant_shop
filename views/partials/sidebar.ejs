@@ -17,18 +17,21 @@
             
                 <% for(let i=0; i < cart.length; i++) {%>
                     <div class="cart-item">
-                        <div class="cart-preview">
-                            <img class="cart-image" src="<%= cart[i].image  %>" alt="cart-item">
-                        </div>
-                        <div class="cart-data">
-                            <h6 class="cart-item-heading">
-                                <%= cart[i].name %>
-                            </h6>
-                            <br />
-                            $ <%= cart[i].price %>
+                        <a class="cart-link" href="/shop/<%= cart[i].id %> ">
+                            <div class="cart-preview">
+                                <img class="cart-image" src="<%= cart[i].image %>" alt="cart-item">
+                            </div>
+                            <div class="cart-data">
+                                <h6 class="cart-item-heading">
+                                    <%= cart[i].name %>
+                                </h6>
                                 <br />
-                            Qty: <%= cart[i].amount %>
-                        </div>
+                                $ <%= cart[i].price %>
+                                    <br />
+                                Qty: <%= cart[i].amount %>
+                            </div>
+                        </a>
+                        
                         <div class="cart-item-delete">
                             <!-- delete -->
                             <form action="/shop/<%= cart[i]._id %>/delete?_method=DELETE" method="POST">
