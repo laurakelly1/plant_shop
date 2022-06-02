@@ -4,12 +4,16 @@ const bcrypt = require('bcrypt');
 const sessionsRouter = express.Router();
 const User = require('../models/user.js');
 const alert = require('alert');
+const Cart = require('../models/cart');
 
 //New (login page)
 sessionsRouter.get('/new', (req, res) => {
+    Cart.find({}, (error, allCart) => {
     res.render('sessions/new.ejs', {
         currentUser: req.session.currentUser,
+        cart: allCart,
     });
+});
 })
 
 //Delete User

@@ -3,13 +3,17 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const userRouter = express.Router();
 const User = require('../models/user.js');
+const Cart = require('../models/cart');
 
 //I
 //N (registration page)
 userRouter.get('/new', (req, res) => {
+    Cart.find({}, (error, allCart) => {
     res.render('users/new.ejs', {
         currentUser: req.session.currentUser,
+        cart: allCart,
     });
+});
 })
 
 //D

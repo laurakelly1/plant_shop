@@ -3,6 +3,7 @@ const { route } = require('express/lib/application');
 const Plant = require('../models/plants.js');
 const User = require('../models/user.js');
 const plantRouter = express.Router();
+const Cart = require('../models/cart');
 
 
 //SEED
@@ -16,19 +17,25 @@ plantRouter.get('/seed', (req, res) =>{
 
 //I
 plantRouter.get('', (req, res) => {
-    Plant.find({}, (error, foundPlants) => {
+    Cart.find({}, (error, allCart) => {
+        Plant.find({}, (error, foundPlants) => {
         res.render('plants/index.ejs', {
             plants: foundPlants,
             currentUser: req.session.currentUser,
+            cart: allCart,
         });
+    });
     });
 });
 
 //N
 plantRouter.get('/new', (req, res) => {
+    Cart.find({}, (error, allCart) => {
     res.render('plants/new.ejs', {
-        currentUser: req.session.currentUser
+        currentUser: req.session.currentUser,
+        cart: allCart,
     });
+});
 });
 
 //D
@@ -60,6 +67,11 @@ plantRouter.put('/:id', (req, res) => {
     })
 })
 
+plantRouter.put('/:id/cart', (req, res) => {
+
+    console.log("add to cart")
+})
+
 //C
 plantRouter.post('', (req, res) => {
     if (req.body.bestSeller === 'on') {
@@ -75,17 +87,20 @@ plantRouter.post('', (req, res) => {
 
 //E
 plantRouter.get('/:id/edit', (req, res) => {
-    
+    Cart.find({}, (error, allCart) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
         res.render('plants/edit.ejs', {
             plant: foundPlant,
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
+            cart: allCart,
         });
     });
+});
 });
 
 //S
 plantRouter.get('/:id', (req, res) => {
+    Cart.find({}, (error, allCart) => {
     Plant.find({}, (error, allPlants) => {
         Plant.findById(req.params.id, (error, foundPlant) => {
             if (req.session.currentUser) {
@@ -93,17 +108,20 @@ plantRouter.get('/:id', (req, res) => {
                     plant: foundPlant,
                     currentUser: req.session.currentUser,
                     plants: allPlants,
+                    cart: allCart,
                 });
             } else {
                 res.render('plants/show.ejs', {
             plant: foundPlant,
             currentUser: req.session.currentUser,
             plants: allPlants,
+            cart: allCart,
         });
             }
         
     });
-    })    
+    })
+});    
 });
 
 module.exports = plantRouter;

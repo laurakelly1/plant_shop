@@ -6,11 +6,12 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const Plant = require("./models/plants.js");
-const { JSDOM } = require( "jsdom" );
-const { window } = new JSDOM( "" );
-const { document } = (new JSDOM('')).window;
+const Cart = require("./models/cart");
+const { JSDOM } = require("jsdom");
+const { window } = new JSDOM("");
+const { document } = new JSDOM("").window;
 global.document = document;
-const $ = require( "jquery" )( window );
+const $ = require("jquery")(window);
 
 // Database Configuration
 // HEROKU
@@ -23,7 +24,6 @@ const db = mongoose.connection;
 db.on("error", (err) => console.log(err.message + " is mongod not running?"));
 db.on("connected", () => console.log("mongod connected"));
 db.on("disconnected", () => console.log("mongod disconnected"));
-
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -49,20 +49,24 @@ const sessionsController = require("./controllers/sessions.js");
 app.use("/sessions", sessionsController);
 
 app.get("/", (req, res) => {
-  Plant.find({}, (error, foundPlants) => {
-    if (req.session.currentUser) {
-      res.render("dashboard.ejs", {
-        currentUser: req.session.currentUser,
-        plants: foundPlants,
-        document: document,
-      });
-    } else {
-      res.render("index.ejs", {
-        currentUser: req.session.currentUser,
-        plants: foundPlants,
-        document: document,
-      });
-    }
+  Cart.find({}, (error, allCart) => {
+    Plant.find({}, (error, foundPlants) => {
+      if (req.session.currentUser) {
+        res.render("dashboard.ejs", {
+          currentUser: req.session.currentUser,
+          plants: foundPlants,
+          document: document,
+          cart: allCart,
+        });
+      } else {
+        res.render("index.ejs", {
+          currentUser: req.session.currentUser,
+          plants: foundPlants,
+          document: document,
+          cart: allCart,
+        });
+      }
+    });
   });
 });
 
@@ -72,4 +76,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Listening...");
 });
-
