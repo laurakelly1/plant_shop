@@ -1,7 +1,6 @@
 <p align="center">
 <img src="https://github.com/laurakelly1/plant_shop/blob/main/images/Screen%20Shot%202022-06-02%20at%206.48.30%20pm.png?raw=true" />
 </p>
-<h1>Planta Nullius</h1>
 The name is Latin for 'no one's plant'. That's what we sell, plants without an owner!! Shop all our healthy and fresh plants and add your favourites to the cart.
 
 <h2>Technologies Used</h2>
