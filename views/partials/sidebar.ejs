@@ -1,6 +1,6 @@
 <script type="text/javascript">
     const openCart = function () {
-        document.getElementById("myCart").style.width = "250px";
+        document.getElementById("myCart").style.width = "350px";
     };
     const closeCart = function () {
         document.getElementById("myCart").style.width = "0";
@@ -12,28 +12,41 @@
         <a href="javascript:void(0)" class="closebtn" onclick='closeCart()'>&times;</a>
         <div class="cart-main">
             <h5 class="cart-heading">My Cart</h5>
-
-
-            <% for(let i=0; i < cart.length; i++) {%>
-
-                    <%= cart[i].name %>
-                 
-                    <% } %>
+            <div class="total-cart">
                 
 
 
+                <% for(let i=0; i < cart.length; i++) {%>
+                    <div class="cart-item">
+                        <div class="cart-preview">
+                            <img class="cart-image" src="<%= cart[i].image  %>" alt="cart-item">
+                        </div>
+                        <div class="cart-data">
+                            <h6 class="cart-item-heading">
+                                <%= cart[i].name %>
+                            </h6>
+                            <br />
+                            $ <%= cart[i].price %>
+                                <br />
+                                Qty: 1
+                        </div>
+                        <div class="cart-item-delete">
+                            <!-- delete -->
+                        <form action="/shop/<%= cart[i]._id %>/delete?_method=DELETE" method="POST">
+                            <input class="waves-effect waves-light btn-small red accent-1" type="submit" value="X" />
+                        </form>
+                        </div>
+                    </div>
 
-
-
-
-
+                    <% } %>
+            </div>
 
 
             <div class="cart-end">
                 <h6>Subtotal</h6>
                 $ <br />
                 Shipping, taxes, and discount codes calculated at checkout.
-                <a href="#" class="checkout-btn waves-effect waves-light btn-small white" >Checkout</a>
+                <a href="#" class="checkout-btn waves-effect waves-light btn-small white">Checkout</a>
             </div>
         </div>
 
