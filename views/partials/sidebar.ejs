@@ -1,32 +1,25 @@
 <script type="text/javascript">
     const openCart = function() {
     console.log("open");
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("myCart").style.width = "250px";
     // document.getElementById("mySidebar").style.width = '250px';
     // document.getElementById("cart-main").style.marginLeft = "0";
 };
 const closeCart = function() {
     console.log('close')
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("myCart").style.width = "0";
     // document.getElementById("mySidebar").style.width = '0';
     // document.getElementById("cart-main").style.marginLeft = "0";
 }
 </script>
-<div class="sidebar">
-    <div id="mySidenav" class="sidenav">
+
+<div class="cart">
+    <div id="myCart" class="cartWindow">
     <a href="javascript:void(0)" class="closebtn" onclick='closeCart()'>&times;</a>
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
-  </div>
-  
-  <!-- Use any element to open the sidenav -->
-  <a href="javascript:void(0)" onclick='openCart()'>open</a>
-  
-  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-  <div id="main">
-    ...
   </div>
 </div>
 

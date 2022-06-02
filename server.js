@@ -12,20 +12,6 @@ const { document } = (new JSDOM('')).window;
 global.document = document;
 const $ = require( "jquery" )( window );
 
-// // functions 
-// const openCart = function() {
-//     console.log("open");
-//     document.getElementById("mySidenav").style.width = "250px";
-//     // document.getElementById("mySidebar").style.width = '250px';
-//     // document.getElementById("cart-main").style.marginLeft = "0";
-// };
-// const closeCart = function() {
-//     console.log('close')
-//     document.getElementById("mySidenav").style.width = "0";
-//     // document.getElementById("mySidebar").style.width = '0';
-//     // document.getElementById("cart-main").style.marginLeft = "0";
-// }
-
 // Database Configuration
 // HEROKU
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -75,8 +61,6 @@ app.get("/", (req, res) => {
         currentUser: req.session.currentUser,
         plants: foundPlants,
         document: document,
-        // openCart: openCart,
-        // closeCart: closeCart,
       });
     }
   });
