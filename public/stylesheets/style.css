@@ -126,11 +126,10 @@ a.logout-button {
   height: 100%;
   width: 0; 
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 80px;
   right: 0;
   background-color: black;
-  overflow-x: hidden;
   padding-top: 60px; 
   transition: 0.5s;
 }
@@ -148,7 +147,7 @@ a.logout-button {
 .cartWindow .closebtn {
   position: absolute;
   top: 0;
-  right: 20px;
+  left: 130px;
   font-size: 36px;
   margin-left: 50px;
 }

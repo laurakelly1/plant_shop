@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head.ejs'); %> 
-    <title>Planta Nullius | Register </title>
+    <%- include('../partials/head.ejs'); %>
+        <title>Planta Nullius | Register </title>
 </head>
+
 <body>
     <header>
-        <%- include('../partials/header.ejs'); %> 
+        <%- include('../partials/header.ejs'); %>
     </header>
-<div class="main">
-    <br/>
-<div class="register-container">
-    <h2>Register</h2>
+    <div class="main">
+        <!-- Cart -->
+        <%- include('../partials/sidebar.ejs'); %>
+            <br />
+            <div class="register-container">
+                <h2>Register</h2>
 
-    <form action='/users' method='POST'>
-        <label for="firstName">First Name</label>
-        <input type=text name="firstName" id="firstName"/>
+                <form action='/users' method='POST'>
+                    <label for="firstName">First Name</label>
+                    <input type=text name="firstName" id="firstName" />
 
-		<label for="email">Email:</label>
-		<input type="email" name="email" id="email" />
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" />
 
-		<label for="password">Password:</label>
-		<input type="password" name="password" id="password" />
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" />
 
-		<input class="login-button-green btn waves-effect waves-light light-green darken-1" type="submit" value="Register">
-	</form>
-</div>
-    
-</div>
-    
+                    <input class="login-button-green btn waves-effect waves-light light-green darken-1" type="submit"
+                        value="Register">
+                </form>
+            </div>
 
-   
+    </div>
+
+
+
     <footer>
-        <%- include('../partials/footer.ejs'); %> 
-    </footer>    
+        <%- include('../partials/footer.ejs'); %>
+    </footer>
 </body>
+
 </html>

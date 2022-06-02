@@ -11,24 +11,27 @@
         <%- include('../partials/header.ejs'); %>
     </header>
     <div class="main">
-        <br />
-        <div class="login-container">
-            <h2>Login</h2>
+        <!-- Cart -->
+        <%- include('../partials/sidebar.ejs'); %>
+            <br />
+            <div class="login-container">
+                <h2>Login</h2>
 
-            <form class="login-box" action='/sessions' method='POST'>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" />
+                <form class="login-box" action='/sessions' method='POST'>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" />
 
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" />
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" />
 
-                <div class="login-buttons">
-                    <input class="login-button-green btn waves-effect waves-light light-green darken-1" type="submit" value="Login">
-            </form>
+                    <div class="login-buttons">
+                        <input class="login-button-green btn waves-effect waves-light light-green darken-1"
+                            type="submit" value="Login">
+                </form>
 
-            <!-- Link to register an account -->
-            <a class="btn waves-effect waves-light red accent-1" href="/users/new">Not registered? Click here</a>
-        </div>
+                <!-- Link to register an account -->
+                <a class="btn waves-effect waves-light red accent-1" href="/users/new">Not registered? Click here</a>
+            </div>
 
     </div>
     </div>

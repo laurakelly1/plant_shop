@@ -1,25 +1,15 @@
 <script type="text/javascript">
-    const openCart = function() {
-    console.log("open");
-    document.getElementById("myCart").style.width = "250px";
-    // document.getElementById("mySidebar").style.width = '250px';
-    // document.getElementById("cart-main").style.marginLeft = "0";
-};
-const closeCart = function() {
-    console.log('close')
-    document.getElementById("myCart").style.width = "0";
-    // document.getElementById("mySidebar").style.width = '0';
-    // document.getElementById("cart-main").style.marginLeft = "0";
-}
+    const openCart = function () {
+        document.getElementById("myCart").style.width = "250px";
+    };
+    const closeCart = function () {
+        document.getElementById("myCart").style.width = "0";
+    }
 </script>
 
 <div class="cart">
     <div id="myCart" class="cartWindow">
-    <a href="javascript:void(0)" class="closebtn" onclick='closeCart()'>&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
+        <a href="javascript:void(0)" class="closebtn" onclick='closeCart()'>&times;</a>
+        
+    </div>
 </div>
-
