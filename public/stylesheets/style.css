@@ -129,19 +129,17 @@ a.logout-button {
   z-index: 10;
   top: 80px;
   right: 0;
-  background-color: black;
+  background-color: rgb(155, 169, 144);
   padding-top: 60px; 
   transition: 0.5s;
 }
-.cartWindow a {
+.closebtn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
   color: #818181;
-  display: block;
   transition: 0.3s;
 }
-.cartWindow a:hover {
+.closebtn:hover {
   color: #f1f1f1;
 }
 .cartWindow .closebtn {
@@ -151,7 +149,24 @@ a.logout-button {
   font-size: 36px;
   margin-left: 50px;
 }
+.cart-main {
+    margin: 20px;
+}
+.cart-heading {
+    color: white;
+}
+.cart-end {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    margin: 20px;
 
+}
+.checkout-btn {
+    color: black;
+    margin: 10px;
+    left: 40px;
+}
 /* SHOP ALL */
 .shop-heading {
   margin: 2% 10%;
