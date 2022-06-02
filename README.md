@@ -1,6 +1,6 @@
-<!-- <p align="center">
-<img src="https://github.com/laurakelly1/wall-art-app/blob/main/images/websiteHeading.png" />
-</p> -->
+<p align="center">
+<img src="https://github.com/laurakelly1/plant_shop/blob/main/images/Screen%20Shot%202022-06-02%20at%206.48.30%20pm.png?raw=true" />
+</p>
 <h1>Planta Nullius</h1>
 The name is Latin for 'no one's plant'. That's what we sell, plants without an owner!! Shop all our healthy and fresh plants and add your favourites to the cart.
 
@@ -10,6 +10,7 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 <li>Node.js</li>
 <li>CSS3</li>
 <li>JavaScript</li>
+<li>Materialize</li>
 <li>Google Fonts</li>
 <li>MongoDB and Mongoose</li>
 <li>Heroku</li>
@@ -17,17 +18,19 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 
 <h2>Screenshots</h2>
 <p align="center">
-<!-- <img src="https://github.com/laurakelly1/wall-art-app/blob/main/images/screenshot.jpg"/> -->
+<img src="https://github.com/laurakelly1/plant_shop/blob/main/images/smartmockups_l3xlu6cx.jpg?raw=true"/>
 </p>
 
 <h2> Getting Started</h2>
 <a href="https://planta-nullius.herokuapp.com" target="_blank">Click here</a> to shop fabulous plants at planta nullius!
 
 <h2>Future Enhancements</h2>
-<!-- <li>Allow user to pick the room (bathroom, kitchen etc.) </li>
-<li>Allow user to change the size of the artwork </li>
-<li>Allow user to change the frame design</li>
-</ul> -->
+<li>Allow user to have an individualise cart experience. </li>
+<li>Allow user access checkout page. </li>
+<li>Introduce a carousel for a gallery of images.</li>
+<li>Allow user to filter items on the Shop All page.</li>
+<li>Enhancements to responsiveness.</li>
+</ul>
 
 <h2>Trello board </h2>
 All work and ideas tracked on Trello. 
