@@ -90,8 +90,7 @@ plantRouter.post("/:id/cart", (req, res) => {
     Cart.create(
         req.body, (error, cartPlant) => {
         res.redirect(`/shop/${req.params.id}`);
-    })
-  
+    });
 });
 
 //E

@@ -10,6 +10,7 @@ const cartSchema = new Schema({
   quantity: Number,
   image: String,
   bestSeller: Boolean,
+  amount: Number,
 });
 
 const Cart = mongoose.model("Cart", cartSchema);

@@ -13,9 +13,8 @@
         <div class="cart-main">
             <h5 class="cart-heading">My Cart</h5>
             <div class="total-cart">
-                
 
-
+            
                 <% for(let i=0; i < cart.length; i++) {%>
                     <div class="cart-item">
                         <div class="cart-preview">
@@ -28,13 +27,14 @@
                             <br />
                             $ <%= cart[i].price %>
                                 <br />
-                                Qty: 1
+                            Qty: <%= cart[i].amount %>
                         </div>
                         <div class="cart-item-delete">
                             <!-- delete -->
-                        <form action="/shop/<%= cart[i]._id %>/delete?_method=DELETE" method="POST">
-                            <input class="waves-effect waves-light btn-small red accent-1" type="submit" value="X" />
-                        </form>
+                            <form action="/shop/<%= cart[i]._id %>/delete?_method=DELETE" method="POST">
+                                <input class="waves-effect waves-light btn-small red accent-1" type="submit"
+                                    value="X" />
+                            </form>
                         </div>
                     </div>
 
@@ -43,10 +43,17 @@
 
 
             <div class="cart-end">
-                <h6>Subtotal</h6>
-                $ <br />
+                <div class="subtotal">
+                    <h6 class="subtotal-text">Subtotal</h6>
+                <% let total=0; 
+                for (let i=0; i< cart.length; i++) { 
+                    total=parseInt(total + cart[i].price) %>
+                <% } %>
+                <h6 class="subtotal-text">$ <%= total %></h6>
+                </div>
                 Shipping, taxes, and discount codes calculated at checkout.
-                <a href="#" class="checkout-btn waves-effect waves-light btn-small white">Checkout</a>
+                <br/>
+                <a href="#" class="checkout-btn waves-effect waves-light btn-small light-green darken-1">Checkout</a>
             </div>
         </div>
 
