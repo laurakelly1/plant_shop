@@ -12,6 +12,7 @@ const { window } = new JSDOM("");
 const { document } = new JSDOM("").window;
 global.document = document;
 const $ = require("jquery")(window);
+const alert = require('alert');
 
 // Database Configuration
 // HEROKU
