@@ -3,7 +3,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const sessionsRouter = express.Router();
 const User = require('../models/user.js');
-const alert = require('alert');
+const popup = require('popups');
 const Cart = require('../models/cart');
 
 //New (login page)
@@ -29,14 +29,18 @@ sessionsRouter.post('/', (req, res) => {
         email: req.body.email,
     }, (error, foundUser) => {
         if (!foundUser) {
-            alert(`Oops! No user with that email address has been registered.`);
+            popup.alert({
+                content: `Oops! No user with that email address has been registered.`,
+            });
         } else {
             const passwordMatches = bcrypt.compareSync(req.body.password, foundUser.password);
             if (passwordMatches) {
                 req.session.currentUser = foundUser;
                 res.redirect('/');
             } else {
-                alert(`Oops! Invalid password.`);
+                popup.alert({
+                    content: `Oops! Invalid password.`,
+                });
             }
         }
     })

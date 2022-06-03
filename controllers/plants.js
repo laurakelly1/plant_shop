@@ -4,7 +4,7 @@ const Plant = require("../models/plants.js");
 const User = require("../models/user.js");
 const plantRouter = express.Router();
 const Cart = require("../models/cart");
-const alert = require('alert');
+const popup = require('popups');
 
 //SEED
 const PlantSeed = require("../models/plantSeed.js");
@@ -90,7 +90,9 @@ plantRouter.post("", (req, res) => {
 plantRouter.post("/:id/cart", (req, res) => {
     Cart.create(
         req.body, (error, cartPlant) => {
-            alert(`Your item was added to the cart.`)
+            popup.alert({
+                content: `Your item was added to the cart.`,
+            })
         res.redirect(`/shop/${req.params.id}`);
     });
 });

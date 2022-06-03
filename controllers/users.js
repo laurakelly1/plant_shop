@@ -4,6 +4,7 @@ const express = require('express');
 const userRouter = express.Router();
 const User = require('../models/user.js');
 const Cart = require('../models/cart');
+const popup = require('popups');
 
 //I
 //N (registration page)
