@@ -2,74 +2,70 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs'); %>
-        <title>Planta Nullius | <%= plant.name %>
-        </title>
+    <%- include("../partials/head.ejs"); %>
+    <title>Planta Nullius | <%= plant.name %>
+    </title>
 </head>
 
 <body>
     <header>
-        <%- include('../partials/header.ejs'); %>
+        <%- include("../partials/header.ejs"); %>
     </header>
-
     <div class="show-page">
         <!-- Cart -->
-        <%- include('../partials/sidebar.ejs'); %>
-            <div class="show-container">
-                <div class="side-img">
-                    <img src="<%= plant.image %> " />
+        <%- include("../partials/sidebar.ejs"); %>
+        <div class="show-container">
+            <div class="side-img">
+                <img src="<%= plant.image %> " />
+            </div>
+            <div class="side-show">
+                <h2 class="show-heading">
+                    <%= plant.name %>
+                </h2>
+                <h5 class="show-botanic">
+                    <%= plant.botanicalName %>
+                </h5>
+                <div class="show-description">
+                    <%= plant.description %>
                 </div>
-
-                <div class="side-show">
-                    <h2 class="show-heading">
-                        <%= plant.name %>
-                    </h2>
-                    <h5 class="show-botanic">
-                        <%= plant.botanicalName %>
-                    </h5>
-                    <div class="show-description">
-                        <%= plant.description %>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>
-                               Types 
-                            </th>
-                            <td>
-                                <%= plant.type.join(', ') %> 
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Price
-                            </th>
-                            <td>
-                                $ <%= plant.price %>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                In stock
-                            </th>
-                            <td>
-                               <%= plant.quantity %> 
-                            </td>
-                        </tr>
-                    </table>
-
-                    <div class="show-buttons">
-                        <!-- edit -->
-                        <a href="/shop/<%= plant._id %>/edit" class="waves-effect waves-light btn-large  light-green darken-1" >Edit Plant</a>
-
-                        <!-- delete -->
-                        <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
-                            <input class="waves-effect waves-light btn-large red accent-1" type="submit" value="Delete Plant" />
-                        </form>
-                    </div>
-
+                <table>
+                    <tr>
+                        <th>
+                            Types
+                        </th>
+                        <td>
+                            <%= plant.type.join(", ") %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Price
+                        </th>
+                        <td>
+                            $ <%= plant.price %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            In stock
+                        </th>
+                        <td>
+                            <%= plant.quantity %>
+                        </td>
+                    </tr>
+                </table>
+                <div class="show-buttons">
+                    <!-- edit -->
+                    <a href="/shop/<%= plant._id %>/edit"
+                        class="waves-effect waves-light btn-large  light-green darken-1">Edit Plant</a>
+                    <!-- delete -->
+                    <form action="/shop/<%= plant._id %>?_method=DELETE" method="POST">
+                        <input class="waves-effect waves-light btn-large red accent-1" type="submit"
+                            value="Delete Plant" />
+                    </form>
                 </div>
             </div>
-      
+        </div>
         <div class="recommendations">
             <h4 class="rec-heading">Other plants you might like</h4>
             <div class="rec-list">
@@ -78,36 +74,31 @@
                     plants[i].type.length; j++) { for ( let k=0; k < plant.type.length; k++) { if (
                     plants[i].type[j]===plant.type[k] && plant.name !=plants[i].name ) {
                     allRecommend.push(plants[i].name); } } } } %>
-
-                    <!-- This removes duplicates -->
-                    <% let recommend=[]; for ( let i=0; i < allRecommend.length; i++) { let exists=false; for ( let j=0;
+                <!-- This removes duplicates -->
+                <% let recommend=[]; for ( let i=0; i < allRecommend.length; i++) { let exists=false; for ( let j=0;
                         j < recommend.length; j++) { if (allRecommend[i]===recommend[j]) { exists=true; break; } } if
                         (!exists) { recommend.push(allRecommend[i]); } } %>
-
-                        <!-- This prints recommandations to page. -->
-                        <% for ( let i=0; i < plants.length; i++) { for (let j=0; j < recommend.length; j++) { if (
+                <!-- This prints recommandations to page. -->
+                <% for ( let i=0; i < plants.length; i++) { for (let j=0; j < recommend.length; j++) { if (
                             plants[i].name==recommend[j]) { %>
-                            <div class="rec-element">
-                                <a class="rec-link" href="/shop/<%= plants[i].id %>">
-                                    <img class="rec-image growImage" src="<%= plants[i].image %> " />
-                                    <div class="rec-text">
-                                        <h5>
-                                            <%= plants[i].name %>
-                                        </h5>
-                                        Price: $ <%= plants[i].price %>
-                                    </div>
-
-                                </a>
-                            </div>
-                            <% } } } %>
+                <div class="rec-element">
+                    <a class="rec-link" href="/shop/<%= plants[i].id %>">
+                        <img class="rec-image growImage" src="<%= plants[i].image %> " />
+                        <div class="rec-text">
+                            <h5>
+                                <%= plants[i].name %>
+                            </h5>
+                            Price: $ <%= plants[i].price %>
+                        </div>
+                    </a>
+                </div>
+                <% } } } %>
             </div>
         </div>
     </div>
-
     </div>
-
     <footer>
-        <%- include('../partials/footer.ejs'); %>
+        <%- include("../partials/footer.ejs"); %>
     </footer>
 </body>
 

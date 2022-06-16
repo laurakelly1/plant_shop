@@ -1,10 +1,10 @@
 const express = require("express");
-const { route } = require("express/lib/application");
+const {  route  } = require("express/lib/application");
 const Plant = require("../models/plants.js");
 const User = require("../models/user.js");
 const plantRouter = express.Router();
 const Cart = require("../models/cart");
-const alert = require('alert');
+const alert = require("alert");
 
 //SEED
 const PlantSeed = require("../models/plantSeed.js");
@@ -16,7 +16,29 @@ plantRouter.get("/seed", (req, res) => {
 });
 
 //I
-plantRouter.get("", (req, res) => {
+plantRouter.get("/", (req, res) => {
+  Cart.find({}, (error, allCart) => {
+    Plant.find({}, (error, foundPlants) => {
+      if (req.session.currentUser) {
+        res.render("dashboard.ejs", {
+          currentUser: req.session.currentUser,
+          plants: foundPlants,
+          document: document,
+          cart: allCart,
+        });
+      } else {
+        res.render("index.ejs", {
+          currentUser: req.session.currentUser,
+          plants: foundPlants,
+          document: document,
+          cart: allCart,
+        });
+      };
+    });
+  });
+});
+
+plantRouter.get("/shop", (req, res) => {
   Cart.find({}, (error, allCart) => {
     Plant.find({}, (error, foundPlants) => {
       res.render("plants/index.ejs", {
@@ -29,7 +51,7 @@ plantRouter.get("", (req, res) => {
 });
 
 //N
-plantRouter.get("/new", (req, res) => {
+plantRouter.get("/shop/new", (req, res) => {
   Cart.find({}, (error, allCart) => {
     res.render("plants/new.ejs", {
       currentUser: req.session.currentUser,
@@ -39,20 +61,20 @@ plantRouter.get("/new", (req, res) => {
 });
 
 //D
-plantRouter.delete("/:id/delete", (req, res) => {
+plantRouter.delete("/shop/:id/delete", (req, res) => {
   Cart.findByIdAndRemove(req.params.id, () => {
     res.redirect("/");
   });
 });
 
-plantRouter.delete("/:id", (req, res) => {
+plantRouter.delete("/shop/:id", (req, res) => {
   Plant.findByIdAndRemove(req.params.id, () => {
     res.redirect("/shop");
   });
 });
 
 //U
-plantRouter.put("/:id", (req, res) => {
+plantRouter.put("/shop/:id", (req, res) => {
   if (req.body.bestSeller === "on") {
     req.body.bestSeller = true;
   } else {
@@ -64,8 +86,7 @@ plantRouter.put("/:id", (req, res) => {
   Plant[req.params.id] = req.body;
   Plant.findByIdAndUpdate(
     req.params.id,
-    req.body,
-    {
+    req.body, {
       new: true,
     },
     (error, updatedPlant) => {
@@ -75,7 +96,7 @@ plantRouter.put("/:id", (req, res) => {
 });
 
 //C
-plantRouter.post("", (req, res) => {
+plantRouter.post("/shop", (req, res) => {
   if (req.body.bestSeller === "on") {
     req.body.bestSeller = true;
   } else {
@@ -87,16 +108,15 @@ plantRouter.post("", (req, res) => {
   });
 });
 
-plantRouter.post("/:id/cart", (req, res) => {
-    Cart.create(
-        req.body, (error, cartPlant) => {
-            alert(`Your item was added to the cart.`)
-        res.redirect(`/shop/${req.params.id}`);
-    });
+plantRouter.post("/shop/:id/cart", (req, res) => {
+  Cart.create(req.body, (error, cartPlant) => {
+    alert(`Your item was added to the cart.`);
+    res.redirect(`/shop/${req.params.id}`);
+  });
 });
 
 //E
-plantRouter.get("/:id/edit", (req, res) => {
+plantRouter.get("/shop/:id/edit", (req, res) => {
   Cart.find({}, (error, allCart) => {
     Plant.findById(req.params.id, (error, foundPlant) => {
       res.render("plants/edit.ejs", {
@@ -109,7 +129,7 @@ plantRouter.get("/:id/edit", (req, res) => {
 });
 
 //S
-plantRouter.get("/:id", (req, res) => {
+plantRouter.get("/shop/:id", (req, res) => {
   Cart.find({}, (error, allCart) => {
     Plant.find({}, (error, allPlants) => {
       Plant.findById(req.params.id, (error, foundPlant) => {
@@ -127,7 +147,7 @@ plantRouter.get("/:id", (req, res) => {
             plants: allPlants,
             cart: allCart,
           });
-        }
+        };
       });
     });
   });

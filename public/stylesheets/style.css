@@ -10,6 +10,7 @@ body {
   z-index: 999;
   width: 100%;
 }
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -28,17 +29,21 @@ nav {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
 #title {
   color: black;
   padding: 0% 2% 1% 2%;
 }
+
 .nav-bar {
   color: black;
   border-left: 1px solid black;
 }
+
 input {
   all: inherit;
 }
+
 .logout-button {
   color: black;
   padding: 0 15px;
@@ -47,9 +52,11 @@ input {
 a.logout-button {
   padding: 0;
 }
+
 .main {
   margin-top: 85px;
 }
+
 .container {
   margin-top: 85px;
 }
@@ -59,11 +66,13 @@ a.logout-button {
   margin: 3%;
   text-align: center;
 }
+
 .dash-button {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
+
 .gallery {
   height: 500px;
   background-image: url("https://github.com/laurakelly1/plant_shop/blob/main/images/gallery-main.jpg?raw=true");
@@ -86,24 +95,30 @@ a.logout-button {
   margin: 2%;
   margin-bottom: 4%;
 }
+
 .growImage {
   transition: all 0.2s ease-in-out;
 }
+
 .growImage:hover {
   transform: scale(1.1);
 }
+
 .best-heading {
   text-align: center;
   border-top: 1px solid black;
 }
+
 .best-seller-item {
   text-align: center;
   margin-bottom: 5%;
 }
+
 .best-seller-link {
   text-decoration: none;
   color: inherit;
 }
+
 .best-seller-text {
   text-align: start;
   border-top: 1px solid black;
@@ -115,10 +130,12 @@ a.logout-button {
 .register-container {
   margin: 10% 30%;
 }
+
 .login-buttons {
   display: flex;
   justify-content: space-between;
 }
+
 .login-button-green {
   width: 180px;
 }
@@ -135,15 +152,18 @@ a.logout-button {
   padding-top: 60px;
   transition: 0.5s;
 }
+
 .closebtn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   color: #818181;
   transition: 0.3s;
 }
+
 .closebtn:hover {
   color: #f1f1f1;
 }
+
 .cartWindow .closebtn {
   position: absolute;
   top: 0;
@@ -157,15 +177,18 @@ a.logout-button {
   margin: 0 20px;
   overflow: auto;
 }
+
 .total-cart {
   height: 400px;
   overflow: scroll;
 }
+
 .cart-link {
   all: inherit;
   border: none;
   padding: 0;
 }
+
 .cart-item {
   display: flex;
   flex-direction: row;
@@ -174,24 +197,29 @@ a.logout-button {
   border-bottom: 1px solid black;
   padding: 15px;
 }
+
 .cart-image {
   width: 100px;
 }
+
 .cart-end {
   position: absolute;
   bottom: 100px;
   left: 0;
   margin: 20px;
 }
+
 .subtotal {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
 }
+
 .subtotal-text {
   font-weight: 600;
 }
+
 .checkout-btn {
   color: black;
   margin: 10px 0;
@@ -201,6 +229,7 @@ a.logout-button {
 .shop-heading {
   margin: 2% 10%;
 }
+
 .all-plants {
   display: flex;
   flex-wrap: wrap;
@@ -208,23 +237,28 @@ a.logout-button {
   gap: 20px;
   margin: 0 10%;
 }
+
 /* The less than sign mean child of, and the * means all elements */
-.all-plants > * {
+.all-plants>* {
   flex: 0 0 calc(25% - 10px);
 }
+
 .plants-image {
   height: 50vh;
   margin: 2%;
   margin-bottom: 4%;
 }
+
 .plants-item {
   text-align: center;
   margin-bottom: 5%;
 }
+
 .plants-link {
   text-decoration: none;
   color: inherit;
 }
+
 .plants-text {
   text-align: start;
   border-top: 1px solid black;
@@ -246,21 +280,26 @@ a.logout-button {
   width: auto;
   padding: 2%;
 }
+
 .side-show {
   width: 40%;
 }
+
 .show-heading {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 10px;
 }
+
 .show-botanic {
   padding: 2%;
 }
+
 .show-description {
   border-top: 1px solid black;
   padding: 2%;
 }
+
 .show-types {
   display: flex;
   align-items: baseline;
@@ -268,26 +307,32 @@ a.logout-button {
   border-top: 1px solid black;
   padding: 0 6%;
 }
+
 .show-types-heading {
   border-right: 1px solid black;
   padding-right: 15%;
 }
+
 .show-buttons {
   display: flex;
   justify-content: baseline;
   margin: 10% 0%;
   gap: 10px;
 }
+
 .cart-input {
   display: none;
 }
+
 /* RECOMMENDATION BAR */
 .recommendations {
   background-color: rgb(230, 230, 230);
 }
+
 .rec-heading {
   margin-left: 5%;
 }
+
 .rec-list {
   display: flex;
   height: 300px;
@@ -296,18 +341,22 @@ a.logout-button {
   gap: 100px;
   margin: 0 8%;
 }
+
 .rec-element {
   text-align: center;
 }
+
 .rec-link {
   text-decoration: none;
   color: inherit;
 }
+
 .rec-image {
   height: 20vh;
   margin: 2%;
   margin-bottom: 4%;
 }
+
 .rec-text {
   text-align: start;
   border-top: 1px solid black;
@@ -319,6 +368,7 @@ a.logout-button {
   margin: 50px;
   margin-top: 120px;
 }
+
 .edit-main {
   width: 80vw;
   height: auto;
@@ -327,12 +377,14 @@ a.logout-button {
   box-shadow: 1px 1px 10px #ddd, -1px -1px 10px #ddd, 1px -1px 10px #ddd,
     -1px 1px 10px #ddd;
 }
+
 .edit-box {
   margin: 0 5%;
   padding: 5px;
   box-sizing: border-box;
   overflow: auto;
 }
+
 .edit-image {
   width: 120%;
   background: url("https://github.com/laurakelly1/plant_shop/blob/main/images/edit-image.jpg?raw=true");
@@ -345,14 +397,17 @@ fieldset {
   padding: 20px;
   margin: 20px 0;
 }
+
 legend {
   padding: 0px 10px;
   font-weight: 500;
 }
+
 label {
   font-weight: 200;
   color: black;
 }
+
 input.edit,
 input.new,
 textarea {
@@ -362,15 +417,18 @@ textarea {
   padding: 10px;
   box-sizing: border-box;
 }
+
 textarea {
   resize: none;
   height: 75px;
   font-weight: 200;
 }
+
 textarea:focus {
   outline: 0;
   border: 2px solid teal;
 }
+
 .edit-button {
   margin: 1% 0%;
 }
@@ -380,6 +438,7 @@ textarea:focus {
   margin: 50px;
   margin-top: 120px;
 }
+
 .new-main {
   width: 80vw;
   height: auto;
@@ -388,41 +447,47 @@ textarea:focus {
   box-shadow: 1px 1px 10px #ddd, -1px -1px 10px #ddd, 1px -1px 10px #ddd,
     -1px 1px 10px #ddd;
 }
+
 .new-box {
   margin: 0 5%;
   padding: 5px;
   box-sizing: border-box;
   overflow: auto;
 }
+
 .new-image {
   width: 120%;
   background: url("https://github.com/laurakelly1/plant_shop/blob/main/images/new-image.jpg?raw=true");
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .new-data {
   position: center;
 }
+
 .new-button {
   margin: 1%;
 }
 
 /* FOOTER */
 footer {
-width: 100%;
+  width: 100%;
   line-height: 2em;
   border-top: 1px solid black;
 }
+
 .footer-link {
   text-decoration: none;
   color: inherit;
 }
+
 .footer-link:hover {
   text-decoration: underline;
 }
 
 .main-footer {
-    
+
   background-color: #a7bc98;
   display: flex;
   flex-flow: row;
@@ -435,9 +500,11 @@ width: 100%;
   padding-right: 8%;
   padding-left: 8%;
 }
+
 .footer-image {
   max-width: 100px;
 }
+
 .footer-end {
   width: 100%;
   color: white;
@@ -452,6 +519,7 @@ width: 100%;
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }

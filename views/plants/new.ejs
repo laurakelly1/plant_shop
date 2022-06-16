@@ -2,21 +2,20 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs'); %>
-        <title>Planta Nullius | New Plant</title>
+    <%- include("../partials/head.ejs"); %>
+    <title>Planta Nullius | New Plant</title>
 </head>
 
 <body>
     <header>
-        <%- include('../partials/header.ejs'); %>
+        <%- include("../partials/header.ejs"); %>
     </header>
     <!-- Cart -->
-    <%- include('../partials/sidebar.ejs'); %>
+    <%- include("../partials/sidebar.ejs"); %>
     <br />
     <h2 class="new-heading">New Plant
     </h2>
     <div class="new-main">
-
         <div class="new-image">
         </div>
         <div class="new-data">
@@ -25,11 +24,11 @@
                     <legend>Plant Details</legend>
                     <!-- name -->
                     <label for="name">Name
-                        <input class="new" type="text" id="name" name='name'/>
+                        <input class="new" type="text" id="name" name="name" />
                     </label>
                     <!-- botantical name -->
                     <label for="botanicalName">Botantical Name
-                        <input class="new" type="text" id="botanicalName" name='botanicalName'/>
+                        <input class="new" type="text" id="botanicalName" name="botanicalName" />
                     </label>
                     <!-- description -->
                     <label for="description">Description
@@ -41,40 +40,32 @@
                     </label>
                     <!-- image address -->
                     <label for="image">Image address
-                        <input class="new" type="text" id="image" name='image'/>
+                        <input class="new" type="text" id="image" name="image" />
                     </label>
                 </fieldset>
                 <fieldset class="plant-data">
                     <legend>Plant Data</legend>
                     <!-- price -->
                     <label for="price">Price
-                        <input class="new" type="text" id="price" name='price'/>
+                        <input class="new" type="text" id="price" name="price" />
                     </label>
                     <!-- quantity -->
                     <label for="quantity">Quantity
-                        <input class="new" type="text" id="quantity" name='quantity'/>
+                        <input class="new" type="text" id="quantity" name="quantity" />
                     </label>
-
                     <!-- bestSeller -->
                     <label for="bestSeller">Best Seller<br />
-                        <input class="new" type="checkbox" class="checked" id="bestSeller" name="bestSeller"/>
-                            <span></span>
+                        <input class="new" type="checkbox" class="checked" id="bestSeller" name="bestSeller" />
+                        <span></span>
                     </label>
                 </fieldset>
-
                 <input class="new-button waves-effect waves-light btn-large  light-green darken-1" type="submit"
                     value="Create Plant" />
             </form>
-
         </div>
-
-
-
     </div>
-
-
     <footer>
-        <%- include('../partials/footer.ejs'); %>
+        <%- include("../partials/footer.ejs"); %>
     </footer>
 </body>
 

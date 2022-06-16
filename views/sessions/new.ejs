@@ -2,44 +2,35 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs'); %>
-        <title>Planta Nullius | Login</title>
+    <%- include("../partials/head.ejs"); %>
+    <title>Planta Nullius | Login</title>
 </head>
 
 <body>
     <header>
-        <%- include('../partials/header.ejs'); %>
+        <%- include("../partials/header.ejs"); %>
     </header>
     <div class="main">
         <!-- Cart -->
-        <%- include('../partials/sidebar.ejs'); %>
-            <br />
-            <div class="login-container">
-                <h2>Login</h2>
-
-                <form class="login-box" action='/sessions' method='POST'>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" />
-
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" />
-
-                    <div class="login-buttons">
-                        <input class="login-button-green btn waves-effect waves-light light-green darken-1"
-                            type="submit" value="Login">
-                </form>
-
-                <!-- Link to register an account -->
-                <a class="btn waves-effect waves-light red accent-1" href="/users/new">Not registered? Click here</a>
-            </div>
-
+        <%- include("../partials/sidebar.ejs"); %>
+        <br />
+        <div class="login-container">
+            <h2>Login</h2>
+            <form class="login-box" action="/sessions" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" />
+                <div class="login-buttons">
+                    <input class="login-button-green btn waves-effect waves-light light-green darken-1" type="submit"
+                        value="Login">
+            </form>
+            <!-- Link to register an account -->
+            <a class="btn waves-effect waves-light red accent-1" href="/users/new">Not registered? Click here</a>
+        </div>
     </div>
-    </div>
-
-
-
     <footer>
-        <%- include('../partials/footer.ejs'); %>
+        <%- include("../partials/footer.ejs"); %>
     </footer>
 </body>
 

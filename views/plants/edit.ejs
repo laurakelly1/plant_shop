@@ -2,22 +2,21 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs'); %>
-        <title>Planta Nullius | Edit
-        </title>
+    <%- include("../partials/head.ejs"); %>
+    <title>Planta Nullius | Edit
+    </title>
 </head>
 
 <body>
     <header>
-        <%- include('../partials/header.ejs'); %>
+        <%- include("../partials/header.ejs"); %>
     </header>
     <!-- Cart -->
-    <%- include('../partials/sidebar.ejs'); %>
+    <%- include("../partials/sidebar.ejs"); %>
     <br />
     <h2 class="edit-heading">Edit Plant
     </h2>
     <div class="edit-main">
-
         <div class="edit-image">
         </div>
         <div class="edit-data">
@@ -26,11 +25,11 @@
                     <legend>Plant Details</legend>
                     <!-- name -->
                     <label for="name">Name
-                        <input class='edit' type="text" id="name" name='name' value="<%= plant.name %> " />
+                        <input class="edit" type="text" id="name" name="name" value="<%= plant.name %> " />
                     </label>
                     <!-- botantical name -->
                     <label for="botanicalName">Botantical Name
-                        <input class='edit' type="text" id="botanicalName" name='botanicalName'
+                        <input class="edit" type="text" id="botanicalName" name="botanicalName"
                             value="<%= plant.botanicalName %> " />
                     </label>
                     <!-- description -->
@@ -39,47 +38,38 @@
                     </label>
                     <!-- type -->
                     <label for="type">Type
-                        <input class='edit'  type="text" id="type" name="type" value="<%= plant.type.join(" , ")%>"></input>
+                        <input class="edit" type="text" id="type" name="type"
+                            value="<%= plant.type.join(" , ")%>"></input>
                     </label>
                     <!-- image address -->
                     <label for="image">Image address
-                        <input class='edit' type="text" id="image" name='image' value="<%= plant.image %> " />
+                        <input class="edit" type="text" id="image" name="image" value="<%= plant.image %> " />
                     </label>
                 </fieldset>
                 <fieldset class="plant-data">
                     <legend>Plant Data</legend>
                     <!-- price -->
                     <label for="price">Price
-                        <input class='edit' type="text" id="price" name='price' value="<%= plant.price %> " />
+                        <input class="edit" type="text" id="price" name="price" value="<%= plant.price %> " />
                     </label>
                     <!-- quantity -->
                     <label for="quantity">Quantity
-                        <input class='edit' type="text" id="quantity" name='quantity' value="<%= plant.quantity %> " />
+                        <input class="edit" type="text" id="quantity" name="quantity" value="<%= plant.quantity %> " />
                     </label>
-
                     <!-- bestSeller -->
                     <label for="bestSeller">Best Seller<br />
-                        <input class='edit' type="checkbox" class="checked" id="bestSeller" name="bestSeller"
+                        <input class="edit" type="checkbox" class="checked" id="bestSeller" name="bestSeller"
                             <% if(plant.bestSeller===true){ %> checked <% } %> />
-
-                            <span></span>
+                        <span></span>
                     </label>
                 </fieldset>
-
-
                 <input class="edit-button waves-effect waves-light btn-large light-green darken-1" type="submit"
                     value="Update Plant" />
             </form>
-
         </div>
-
-
-
     </div>
-
-
     <footer>
-        <%- include('../partials/footer.ejs'); %>
+        <%- include("../partials/footer.ejs"); %>
     </footer>
 </body>
 

@@ -12,7 +12,7 @@ const { window } = new JSDOM("");
 const { document } = new JSDOM("").window;
 global.document = document;
 const $ = require("jquery")(window);
-const alert = require('alert');
+const alert = require("alert");
 
 // Database Configuration
 // HEROKU
@@ -41,7 +41,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Routes/ Controllers
 const plantsController = require("./controllers/plants.js");
-app.use("/shop", plantsController);
+app.use("/", plantsController);
 
 const userController = require("./controllers/users.js");
 app.use("/users", userController);

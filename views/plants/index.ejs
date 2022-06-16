@@ -2,44 +2,39 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs'); %>
-        <title>Planta Nullius | Shop All</title>
+    <%- include("../partials/head.ejs"); %>
+    <title>Planta Nullius | Shop All</title>
 </head>
 
 <body>
     <header>
-        <%- include('../partials/header'); %>
+        <%- include("../partials/header"); %>
     </header>
-<div class="main">
-    <!-- Cart -->
-    <%- include('../partials/sidebar.ejs'); %>
-    <br/>
-    <h2 class="shop-heading">Shop All</h2>
-
-    <div class="all-plants">
-        <% for(let i=0; i < plants.length; i++) {%>
-                <div class="plants-item">
-                    <a class="plants-link" href="/shop/<%= plants[i]._id %>">
-                        <img class="plants-image growImage" src="<%= plants[i].image %> " />
-                        <br/>
+    <div class="main">
+        <!-- Cart -->
+        <%- include("../partials/sidebar.ejs"); %>
+        <br />
+        <h2 class="shop-heading">Shop All</h2>
+        <div class="all-plants">
+            <% for(let i=0; i < plants.length; i++) {%>
+            <div class="plants-item">
+                <a class="plants-link" href="/shop/<%= plants[i]._id %>">
+                    <img class="plants-image growImage" src="<%= plants[i].image %> " />
+                    <br />
                     <div class="plants-text">
                         <h5><%= plants[i].name %></h5>
-                        <br/>
-                        <%= plants[i].botanicalName  %> 
-                        <br/>
-                        Price: $ <%= plants[i].price  %> 
+                        <br />
+                        <%= plants[i].botanicalName  %>
+                        <br />
+                        Price: $ <%= plants[i].price  %>
                     </div>
-                        
-                    </a>
-                </div>
-                    <% } %>
+                </a>
+            </div>
+            <% } %>
+        </div>
     </div>
-
-</div>
-    
-
-    <footer>
-        <%- include('../partials/footer.ejs'); %>
+    ∏ <footer>
+        <%- include("../partials/footer.ejs"); %>
     </footer>
 </body>
 
