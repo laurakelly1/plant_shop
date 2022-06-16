@@ -49,28 +49,6 @@ app.use("/users", userController);
 const sessionsController = require("./controllers/sessions.js");
 app.use("/sessions", sessionsController);
 
-app.get("/", (req, res) => {
-  Cart.find({}, (error, allCart) => {
-    Plant.find({}, (error, foundPlants) => {
-      if (req.session.currentUser) {
-        res.render("dashboard.ejs", {
-          currentUser: req.session.currentUser,
-          plants: foundPlants,
-          document: document,
-          cart: allCart,
-        });
-      } else {
-        res.render("index.ejs", {
-          currentUser: req.session.currentUser,
-          plants: foundPlants,
-          document: document,
-          cart: allCart,
-        });
-      }
-    });
-  });
-});
-
 // Listening
 const PORT = process.env.PORT || 3000;
 
