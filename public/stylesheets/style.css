@@ -133,7 +133,7 @@ a.logout-button {
 
 .login-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .login-button-green {
@@ -239,7 +239,7 @@ a.logout-button {
 }
 
 /* The less than sign mean child of, and the * means all elements */
-.all-plants>* {
+.all-plants > * {
   flex: 0 0 calc(25% - 10px);
 }
 
@@ -434,7 +434,7 @@ textarea:focus {
 }
 
 /* NEW PAGE */
-.new-heading {
+.newh2heading {
   margin: 50px;
   margin-top: 120px;
 }
@@ -487,7 +487,6 @@ footer {
 }
 
 .main-footer {
-
   background-color: #a7bc98;
   display: flex;
   flex-flow: row;
@@ -515,12 +514,89 @@ footer {
 }
 
 /* RESPONSIVENESS */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+@media screen and (max-width: 768px) {
+  /* HEADER */
+  nav {
+    width: 100%;
+  }
+  #title {
+    font-size: 20px;
+  }
+  /* BESTSELLERS */
+  .best-Sellers {
+    gap: 10px;
+  }
+  .bestSeller-image {
+    height: 40vh;
+  }
+  /* SHOP ALL */
+  .all-plants {
+    gap: 15px;
+    margin: 0 7%;
+  }
+  .plants-image {
+    height: 40vh;
+  }
+  /* LOGIN/REGISTER */
+  .login-container,
+  .register-container {
+    width: 200px;
+    margin: 10px auto;
+  }
+  .login-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .login-button-green,
+  .login-button-red {
+    width: 200px;
+  }
+  /* SHOW PAGE */
+  .show-container {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .sidenav a {
-    font-size: 18px;
+  .side-img {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+  }
+  .show-image {
+    width: auto;
+    height: 100%;
+  }
+  .side-show {
+    width: 90%;
+    margin: 20px;
+  }
+  .show-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10% 0%;
+    gap: 10px;
+  }
+  /* RECOMMENDATION BAR */
+  .rec-list {
+    width: 300px;
+  }
+  /* FOOTER */
+  .main-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #title {
+    font-size: 15px;
   }
 }
