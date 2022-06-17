@@ -579,10 +579,6 @@ footer {
     margin: 10% 0%;
     gap: 10px;
   }
-  /* RECOMMENDATION BAR */
-  .rec-list {
-    width: 300px;
-  }
   /* FOOTER */
   .main-footer {
     display: flex;
