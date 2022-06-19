@@ -28,7 +28,6 @@ The name is Latin for 'no one's plant'. That's what we sell, plants without an o
 <li>Allow user access checkout page. </li>
 <li>Introduce a carousel for a gallery of images.</li>
 <li>Allow user to filter items on the Shop All page.</li>
-<li>Enhancements to responsiveness.</li>
 </ul>
 
 <h2>Trello board </h2>
